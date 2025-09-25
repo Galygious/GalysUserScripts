@@ -926,6 +926,7 @@
     function createUI() {
         const ui = document.createElement('div');
         ui.id = 'csv-email-sender';
+        ui.style.display = 'none'; // Start hidden
         ui.innerHTML = `
             <button class="csv-minimize-btn" id="csv-minimize-btn">−</button>
             <div id="csv-content">
@@ -1375,15 +1376,11 @@
         // Register Tampermonkey menu command
         GM_registerMenuCommand('Toggle CSV Email Sender', toggleInterface);
 
-        // Wait for page to load and create the interface (but don't show it yet)
+        // Wait for page to load and create the interface (starts hidden by default)
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                createUI();
-                hideInterface(); // Start hidden
-            });
+            document.addEventListener('DOMContentLoaded', createUI);
         } else {
             createUI();
-            hideInterface(); // Start hidden
         }
     }
 
