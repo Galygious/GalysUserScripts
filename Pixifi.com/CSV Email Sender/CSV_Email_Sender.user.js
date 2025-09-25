@@ -9,6 +9,7 @@
 // @grant        GM_xmlhttpRequest
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_registerMenuCommand
 // @connect      www.pixifi.com
 // ==/UserScript==
 
@@ -39,6 +40,8 @@
     let isProcessing = false;
     let configProfiles = {}; // Store configuration profiles
     let currentProfile = 'abandoned-resends'; // Current active profile name
+    let isInterfaceVisible = false; // Track if the interface is currently visible
+    let csvInterface = null; // Reference to the interface element
 
     // ---- STYLES ----
     GM_addStyle(`
@@ -887,6 +890,39 @@
 
     // ---- UI FUNCTIONS ----
 
+    function showInterface() {
+        if (isInterfaceVisible) {
+            return; // Already visible
+        }
+
+        if (!csvInterface) {
+            createUI();
+        } else {
+            csvInterface.style.display = 'block';
+        }
+        
+        isInterfaceVisible = true;
+        console.log('CSV Email Sender interface shown');
+    }
+
+    function hideInterface() {
+        if (!isInterfaceVisible || !csvInterface) {
+            return; // Already hidden or doesn't exist
+        }
+
+        csvInterface.style.display = 'none';
+        isInterfaceVisible = false;
+        console.log('CSV Email Sender interface hidden');
+    }
+
+    function toggleInterface() {
+        if (isInterfaceVisible) {
+            hideInterface();
+        } else {
+            showInterface();
+        }
+    }
+
     function createUI() {
         const ui = document.createElement('div');
         ui.id = 'csv-email-sender';
@@ -1037,6 +1073,7 @@
         `;
 
         document.body.appendChild(ui);
+        csvInterface = ui; // Store reference to the interface
         attachEventListeners();
 
         // Initialize the profile dropdown
@@ -1065,7 +1102,7 @@
         textInput.addEventListener('input', handleFileUpload);
         
         sendBtn.addEventListener('click', handleSendEmails);
-        closeBtn.addEventListener('click', () => document.getElementById('csv-email-sender').remove());
+        closeBtn.addEventListener('click', hideInterface);
         minimizeBtn.addEventListener('click', toggleMinimize);
 
         saveConfigBtn.addEventListener('click', applyConfiguration);
@@ -1335,11 +1372,18 @@
         const testLeadId = getLeadIdFromUrl();
         console.log(`🧪 Current lead ID: ${testLeadId}`);
 
-        // Wait for page to load
+        // Register Tampermonkey menu command
+        GM_registerMenuCommand('Toggle CSV Email Sender', toggleInterface);
+
+        // Wait for page to load and create the interface (but don't show it yet)
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', createUI);
+            document.addEventListener('DOMContentLoaded', () => {
+                createUI();
+                hideInterface(); // Start hidden
+            });
         } else {
             createUI();
+            hideInterface(); // Start hidden
         }
     }
 

@@ -12,10 +12,11 @@
 // @match        *://*.bellofjob.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_cookie
-// @connect      127.0.0.1
-// @connect      localhost
-// @connect      192.168.68.95
-// @connect      192.168.71.103
+// @grant        GM_registerMenuCommand
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @connect      https://jellydl.galydev.com
+// @connect      jellydl.galydev.com
 // ==/UserScript==
 
 
@@ -26,6 +27,32 @@
   const DOWNLOAD_BACKEND = "aria"; // or "xdm"
   // Auto-close behavior after successful handoff
   const AUTO_CLOSE = true; // set to false to keep tabs open
+  // set base url for aria2 rpc
+  const ARIA2_RPC_URL = "https://jellydl.galydev.com";
+  // initialize token
+  let token = "";
+
+  // Initialize visibility timestamp for auto-close functionality
+  try { 
+    if (!window.__galyFirstVisibleAt) {
+      window.__galyFirstVisibleAt = Date.now();
+      console.log("🕐 Initialized visibility timestamp for auto-close:", window.__galyFirstVisibleAt);
+    }
+  } catch (_) {}
+
+  function getToken() {
+    return GM_getValue("aria2_token", "");
+  }
+
+  function setToken() {
+      const newToken = prompt("Enter your Aria2 RPC secret token:");
+      if (newToken !== null) {
+          GM_setValue("aria2_token", newToken);
+          alert("Token saved!");
+      }
+  }
+
+  GM_registerMenuCommand("Set Aria2 Token", setToken);
 
   // Unified send function
   async function sendUrl(url, filename = null) {
@@ -542,8 +569,21 @@
       const enabled = !!AUTO_CLOSE;
       const firstVisibleAt = window.__galyFirstVisibleAt || 0;
       const minVisibleOk = firstVisibleAt && (Date.now() - firstVisibleAt > 5000);
-      return enabled && minVisibleOk;
-    } catch (_) { return false; }
+      const result = enabled && minVisibleOk;
+      
+      console.log("🔍 Auto-close check:", {
+        enabled,
+        firstVisibleAt,
+        minVisibleOk,
+        result,
+        timeSinceVisible: firstVisibleAt ? Date.now() - firstVisibleAt : 'unknown'
+      });
+      
+      return result;
+    } catch (e) { 
+      console.log("❌ Auto-close check error:", e);
+      return false; 
+    }
   }
 
   // Capture mode to discover producer endpoints
@@ -964,7 +1004,7 @@
             try { setCaptureMode(30000); } catch (_) {}
             try { await humanClick(btn); } catch (_) {}
             window.__galyCloudClicked = true;
-            setTimeout(() => { runFinalDownload().catch(()=>{}); }, 1200);
+            setTimeout(() => { runFinalDownload().catch(()=>{}); }, 3000);
           };
           debugger;
           return true;
@@ -973,8 +1013,8 @@
           console.log('🟢 Auto-clicking Cloud button');
           try { setCaptureMode(30000); } catch (_) {}
           try { await humanClick(btn); } catch (_) {}
-          // Give dialog time to render, then wait for final link
-          setTimeout(() => { runFinalDownload().catch(()=>{}); }, 1200);
+          // Give dialog time to render and animation to complete, then wait for final link
+          setTimeout(() => { runFinalDownload().catch(()=>{}); }, 3000);
           return true;
         }
       }
@@ -1363,118 +1403,118 @@
       }
     });
   }
-    async function sendUrlToAria(url, filename = null) {
-        const ariaRpcUrl = "http://192.168.71.103:8087/jsonrpc"; // adjust host/port
-        const token = "804f50bdd88d3bf70539a19af456ddd7";       // your rpc-secret
+  async function sendUrlToAria(url, filename = null) {
+      const ariaRpcUrl = ARIA2_RPC_URL + "/jsonrpc"; // adjust host/port
+      const token = getToken();       // your rpc-secret
 
-        const options = {};
-        const effectiveFilename = filename || extractFilename(url);
-        if (effectiveFilename) {
-            options.out = effectiveFilename;
-        }
+      const options = {};
+      const effectiveFilename = filename || extractFilename(url);
+      if (effectiveFilename) {
+          options.out = effectiveFilename;
+      }
 
-        const body = {
-            jsonrpc: "2.0",
-            method: "aria2.addUri",
-            id: "galy_" + Date.now(),
-            params: [
-                "token:" + token,
-                [url],
-                options
-            ]
-        };
+      const body = {
+          jsonrpc: "2.0",
+          method: "aria2.addUri",
+          id: "galy_" + Date.now(),
+          params: [
+              "token:" + token,
+              [url],
+              options
+          ]
+      };
 
-        const bodyForLog = {
-            ...body,
-            params: [
-                "token:" + (token ? token.slice(0, 4) + "…" : ""),
-                [url],
-                options
-            ]
-        };
+      const bodyForLog = {
+          ...body,
+          params: [
+              "token:" + (token ? token.slice(0, 4) + "…" : ""),
+              [url],
+              options
+          ]
+      };
 
-        try {
-            console.log("📡 Sending to aria2 RPC", { ariaRpcUrl, body: bodyForLog, backend: DOWNLOAD_BACKEND });
-            // Use GM_xmlhttpRequest to avoid CORS headaches
-            if (typeof GM_xmlhttpRequest !== "undefined") {
-                return await new Promise((resolve) => {
-                    GM_xmlhttpRequest({
-                        method: "POST",
-                        url: ariaRpcUrl,
-                        data: JSON.stringify(body),
-                        headers: { "Content-Type": "application/json" },
-                        timeout: 10000,
-                        onload: (resp) => {
-                            const status = resp.status;
-                            const text = resp.responseText || "";
-                            console.log("📥 aria2 response", { status, text: text.slice(0, 500) });
-                            if (status !== 200) {
-                                console.error("❌ aria2 HTTP error", { status, text: text.slice(0, 500) });
-                                resolve(false);
-                                return;
-                            }
-                            try {
-                                const result = JSON.parse(text);
-                                if (result && result.result) {
-                                    console.log("✅ aria2 accepted URL", { gid: result.result, filename: effectiveFilename || null });
-                                    resolve(true);
-                                } else if (result && result.error) {
-                                    console.error("❌ aria2 error", result.error);
-                                    resolve(false);
-                                } else {
-                                    console.warn("⚠️ Unexpected aria2 response", result);
-                                    resolve(false);
-                                }
-                            } catch (e) {
-                                console.error("❌ Failed to parse aria2 JSON", e);
-                                resolve(false);
-                            }
-                        },
-                        onerror: (err) => {
-                            console.error("❌ aria2 network error", err);
-                            resolve(false);
-                        },
-                        ontimeout: () => {
-                            console.error("⏰ aria2 request timed out");
-                            resolve(false);
-                        }
-                    });
-                });
-            } else {
-                // fallback using fetch
-                const res = await fetch(ariaRpcUrl, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(body)
-                });
-                const text = await res.text();
-                console.log("📥 aria2 response (fetch)", { status: res.status, text: text.slice(0, 500) });
-                if (!res.ok) {
-                    console.error("❌ aria2 HTTP error (fetch)", { status: res.status });
-                    return false;
-                }
-                try {
-                    const result = JSON.parse(text);
-                    if (result && result.result) {
-                        console.log("✅ aria2 accepted URL (fetch)", { gid: result.result, filename: effectiveFilename || null });
-                        return true;
-                    }
-                    if (result && result.error) {
-                        console.error("❌ aria2 error (fetch)", result.error);
-                        return false;
-                    }
-                    console.warn("⚠️ Unexpected aria2 response (fetch)", result);
-                    return false;
-                } catch (e) {
-                    console.error("❌ Failed to parse aria2 JSON (fetch)", e);
-                    return false;
-                }
-            }
-        } catch (err) {
-            console.error("❌ Error sending to aria2:", err);
-            return false;
-        }
-    }
+      try {
+          console.log("📡 Sending to aria2 RPC", { ariaRpcUrl, body: bodyForLog, backend: DOWNLOAD_BACKEND });
+          // Use GM_xmlhttpRequest to avoid CORS headaches
+          if (typeof GM_xmlhttpRequest !== "undefined") {
+              return await new Promise((resolve) => {
+                  GM_xmlhttpRequest({
+                      method: "POST",
+                      url: ariaRpcUrl,
+                      data: JSON.stringify(body),
+                      headers: { "Content-Type": "application/json" },
+                      timeout: 10000,
+                      onload: (resp) => {
+                          const status = resp.status;
+                          const text = resp.responseText || "";
+                          console.log("📥 aria2 response", { status, text: text.slice(0, 500) });
+                          if (status !== 200) {
+                              console.error("❌ aria2 HTTP error", { status, text: text.slice(0, 500) });
+                              resolve(false);
+                              return;
+                          }
+                          try {
+                              const result = JSON.parse(text);
+                              if (result && result.result) {
+                                  console.log("✅ aria2 accepted URL", { gid: result.result, filename: effectiveFilename || null });
+                                  resolve(true);
+                              } else if (result && result.error) {
+                                  console.error("❌ aria2 error", result.error);
+                                  resolve(false);
+                              } else {
+                                  console.warn("⚠️ Unexpected aria2 response", result);
+                                  resolve(false);
+                              }
+                          } catch (e) {
+                              console.error("❌ Failed to parse aria2 JSON", e);
+                              resolve(false);
+                          }
+                      },
+                      onerror: (err) => {
+                          console.error("❌ aria2 network error", err);
+                          resolve(false);
+                      },
+                      ontimeout: () => {
+                          console.error("⏰ aria2 request timed out");
+                          resolve(false);
+                      }
+                  });
+              });
+          } else {
+              // fallback using fetch
+              const res = await fetch(ariaRpcUrl, {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(body)
+              });
+              const text = await res.text();
+              console.log("📥 aria2 response (fetch)", { status: res.status, text: text.slice(0, 500) });
+              if (!res.ok) {
+                  console.error("❌ aria2 HTTP error (fetch)", { status: res.status });
+                  return false;
+              }
+              try {
+                  const result = JSON.parse(text);
+                  if (result && result.result) {
+                      console.log("✅ aria2 accepted URL (fetch)", { gid: result.result, filename: effectiveFilename || null });
+                      return true;
+                  }
+                  if (result && result.error) {
+                      console.error("❌ aria2 error (fetch)", result.error);
+                      return false;
+                  }
+                  console.warn("⚠️ Unexpected aria2 response (fetch)", result);
+                  return false;
+              } catch (e) {
+                  console.error("❌ Failed to parse aria2 JSON (fetch)", e);
+                  return false;
+              }
+          }
+      } catch (err) {
+          console.error("❌ Error sending to aria2:", err);
+          return false;
+      }
+  }
 
 
   // Send URL to XDM using official extension protocol
@@ -2414,7 +2454,19 @@
                     downloadManager.processQueueIfNeeded();
                 }
                 // Close this window/tab after handing off to XDM
-                setTimeout(() => { try { if (shouldAutoClose()) window.close(); } catch (e) {} }, 500);
+                setTimeout(() => { 
+                  try { 
+                    console.log("🚪 Attempting to close tab after successful backend handoff");
+                    if (shouldAutoClose()) {
+                      console.log("✅ Auto-close approved, closing window");
+                      window.close(); 
+                    } else {
+                      console.log("❌ Auto-close not approved, keeping tab open");
+                    }
+                  } catch (e) {
+                    console.log("❌ Auto-close attempt failed:", e);
+                  } 
+                }, 500);
                 return true;
             }
 
