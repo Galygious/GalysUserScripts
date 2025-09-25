@@ -1,0 +1,7 @@
+=IFERROR(TEXTJOIN(", ", TRUE, ARRAYFORMULA(SUBSTITUTE(QUERY(D:E, "SELECT D WHERE E = '"&$G$1&"' AND D IS NOT NULL AND not D starts with '(1' LIMIT "&$G$2&" OFFSET "&(ROW()-1)*$G$2), " ", ""))),"")
+=IFERROR(TEXTJOIN(", ", TRUE, ARRAYFORMULA(SUBSTITUTE(QUERY(D:E, "SELECT D WHERE E = '"&$G$1&"' AND D IS NOT NULL AND not D starts with '(1' LIMIT "&$G$2&" OFFSET "&(ROW()-1)*$G$2), " ", ""))),"")
+
+
+G1 is a selector drop down with the 4 brands BOOKING, SCHEDULE, RESERVE, SESSIONS
+G2 is the number per set 49.
+a through e is the csv with headers.

@@ -1,0 +1,1081 @@
+<nav id="filterContainer" class="navmenu navmenu-default navmenu-fixed-right offcanvas in" role="navigation" style="">
+    <a class="popup-cancel" onclick="$('.navmenu').offcanvas('hide');"><i class="icon-cancel font-red-flamingo"></i></a>
+    
+    <a class="navmenu-brand headerTitle" href="#"><i class="fa fa-gears"></i> Filter Options</a>
+    <hr>
+    
+    <ul class="nav navmenu-nav">
+        <li>						Filter Status: <div class="pull-right"><button class="btn btn-xs  btn-white" type="button" onclick="clearFilter('status');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <select id="filterStatus" name="filterStatus" style="width: 150px; display: none;" onchange="refreshLeads();" multiple="multiple" class="styled">
+<option value="18561" selected="selected">BABY HERE ADD QUESTIONNAIRE</option>
+<option value="18562" selected="selected">ADVANCE BABY ADD QUESTIONNAIRE</option>
+<option value="17884">BABY HERE  FOLLOW UP</option>
+<option value="17885">BABY NOT HERE - LONG TERM LEAD FOLLOW UP</option>
+<option value="15624">FOLLOW UP CALL/TEXT</option>
+<option value="13430">BOOKING!!!!!</option>
+<option value="9585">***HOLD***</option>
+<option value="18488">HOLD  DOUBLE SESSION ?</option>
+<option value="18563" selected="selected">MANHATTAN BABY HERE ADD QUESTIONNAIRE</option>
+<option value="18564" selected="selected">MANHATTAN ADVANCED BABY ADD QUESTIONNAIRE</option>
+<option value="18554">MANHATTAN BABY HERE </option>
+<option value="18555">MANHATTAN LONG TERM LEAD FOLLOW UP</option>
+<option value="13803">GIFT CARD PURCHASE (INTERESTED)</option>
+<option value="15578">SESSIONS ---HEATHER ATTN</option>
+<option value="13047">JENNIFER ATTN!!!</option>
+<option value="18029">BOOKING---LAUREN ATTN</option>
+<option value="17644">SCHEDULE --JASMON ATTN</option>
+<option value="18791">RESERVE --- KAILEE ATTN</option>
+<option value="20787">CONFIRMING DOB</option>
+<option value="11298">WAIT LISTED</option>
+<option value="13424">LONG TERM LEAD FOLLOW UP STEP 2</option>
+<option value="13431">MELISSA MANUAL FOLLOW UP</option>
+<option value="13426" selected="selected">**NEW**</option>
+<option value="13913">ARCHIVED</option>
+<option value="14058">FUTURE MARKET POSSIBLY</option>
+<option value="14930">MEDIUM (32-89 DAYS) LEAD FOLLOW UP STATUS 1</option>
+<option value="14931">MEDIUM (32-89 DAYS) LEAD FOLLOW UP STATUS 2</option>
+<option value="16395">GOOD FIT - MODEL</option>
+<option value="17222">POSSIBLE FIT - MODEL</option>
+<option value="17221">AUS MODEL - NOT ARRIVED</option>
+<option value="17220">POSS POST TRAINING - MODEL</option>
+<option value="16814">NEW PHOTOGRAPHER INQUIRY</option>
+<option value="17340">NEVER OPENED!!!</option>
+<option value="17798">NO FURTHER CONTACT!!!</option>
+<option value="17872">ALL FOLLOW UPS COMPLETE - ARCHIVED</option>
+<option value="17887">BACK-UP MODEL</option>
+<option value="18234">KC 1 GOOD FIT</option>
+<option value="18490">BABY HERE TENTATIVE BOOKING</option>
+<option value="18588">ADVANCED TENTATIVE BOOKING</option>
+<option value="18524">GOOD FIT2 - MODEL</option>
+<option value="13422">SHORT TERM LEAD FOLLOW UP</option>
+<option value="18109">LONG TERM LEAD FOLLOW UP</option>
+<option value="18632">BABY HERE PAYMENT PAST DUE</option>
+<option value="18589">ADVANCED BOOKING PAYMENT PAST DUE</option>
+<option value="18629">ADVANCED LEAD DELETE INVOICE &amp; REASSIGN TO DID NOT PAY INVOICE FOLLOW UP LEAD STATUS</option>
+<option value="18633">BABY HERE LEAD DELETE INVOICE</option>
+<option value="18634">DID NOT PAY INVOICE FOLLOW UP LEAD STATUS</option>
+<option value="18950">PW MODELS - Future</option>
+<option value="19129">G00D FIT2  - MODEL</option>
+<option value="19408">Good Fit3 - Model</option>
+<option value="19680">REVIEWED - NOT A FIT</option>
+<option value="19681">REVIEWED - ASSESSING</option>
+<option value="20059">REVIEWED - FUTURE CONSIDERATION</option>
+<option value="20689">Content Model</option>
+<option value="20715">Older Baby Model</option>
+<option value="20717">KANSAS CITY - SESSION WANTED</option>
+<option value="20999">MATERNITY MODEL</option>
+</select><a href="javascript:void(0);" class="ui-multiselect ui-widget ui-state-default ui-corner-all" aria-haspopup="true" style="width: 261px;"><span class="ui-icon ui-icon-triangle-2-n-s"></span><span>5 selected</span></a>
+</span>
+</li>
+        <li>					Filter Priority: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('priority');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;">Any Priority</div><select id="priorityCombo" name="priorityCombo" style="width: 248px; opacity: 0; position: relative; z-index: 100;" onchange="refreshLeads();" class="styled">
+<option value="" selected="selected">Any Priority</option>
+<option value="0">No Priority</option>
+<option value="1">Low Priority</option>
+<option value="2">Medium Priority</option>
+<option value="3">HIGH PRIORITY</option>
+</select></div>
+</span>
+</li>
+        <li>							Filter Brand: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('brand');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <select id="filterBrand" name="filterBrand" style="width: 155px; display: none;" onchange="refreshLeads();" multiple="multiple" class="styled">
+<option value="none">With No Brand</option>
+<option value="11473" selected="selected">BOOKING</option>
+<option value="15793" selected="selected">SESSIONS</option>
+<option value="18826" selected="selected">SCHEDULE</option>
+<option value="19647" selected="selected">RESERVE</option>
+<option value="11634">(EDITING) EAST/CENTRAL SMP </option>
+<option value="17159">(EDITING) WEST SMP</option>
+<option value="14652">Sweet Me Models</option>
+<option value="17956">SMP JOBS</option>
+<option value="21064">PC -SMP</option>
+<option value="17187">ONBOARDING SMP</option>
+<option value="15121">XXX DEFUNCT BRAND NAME XXX</option>
+<option value="17999">Sweet Me Gift Cards</option>
+<option value="18626">Sweet Me Staff Vacation Calendar</option>
+<option value="19691">MELISSA TEST BRAND - DO NOT USE</option>
+</select><a href="javascript:void(0);" class="ui-multiselect ui-widget ui-state-default ui-corner-all" aria-haspopup="true" style="width: 261px;"><span class="ui-icon ui-icon-triangle-2-n-s"></span><span>4 selected</span></a>
+</span>
+</li>
+        <li>
+                                
+<span style="float: left;  width: 310px;">Staff: </span>
+<div class="pull-right"><button class="btn btn-xs  btn-white" type="button" onclick="clearFilter('staff');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<div style="float: left; ">    <div id="filterStaffCombo" class="dd-container" style="width: 260px;"><div class="dd-select" style="width: 260px; background: rgb(238, 238, 238);"><input class="dd-selected-value" type="hidden" value=""><a class="dd-selected"><label class="dd-selected-text">All Staff</label></a><span class="dd-pointer dd-pointer-down"></span></div><ul class="dd-options dd-click-off-close" style="width: 260px;"><li><a class="dd-option dd-option-selected"> <label class="dd-option-text">All Staff</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="none"> <label class="dd-option-text">No Staff Assigned</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27010"> <label class="dd-option-text">ATL Amaya Alexander</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24969"> <label class="dd-option-text">ATL Jamilyn  Boze (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22987"> <label class="dd-option-text">ATL Sonia Lemos (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22988"> <label class="dd-option-text">ATL Wendy White (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27418"> <label class="dd-option-text">ATL/SUP - b Sally Boice</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27711"> <label class="dd-option-text">ATL/SUP - b Taryn Brantley</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27782"> <label class="dd-option-text">ATL/SUP-b Natalia Tamariz Clemente</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26876"> <label class="dd-option-text">AUS Dayene Antunes</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26464"> <label class="dd-option-text">AUS Emily Golding (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="16609"> <label class="dd-option-text">AUS Katherine  Drye</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23647"> <label class="dd-option-text">AUS Nicole Mitchell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="21185"> <label class="dd-option-text">AUS Tracy Perrone (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19326"> <label class="dd-option-text">BOS Jennifer Zall (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23052"> <label class="dd-option-text">BOS Jocelin Wattana (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24810"> <label class="dd-option-text">BOS Karen Moriarty (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20104"> <label class="dd-option-text">BOS Nancy Terlato (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23798"> <label class="dd-option-text">BOS Scot Woodman (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20609"> <label class="dd-option-text">CLT Becky Johnston (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25342"> <label class="dd-option-text">CLT Donna Knock</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24516"> <label class="dd-option-text">CLT Wendy Carr (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23346"> <label class="dd-option-text">CHI April Martinez (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23180"> <label class="dd-option-text">CHI Candidate Sample Candidate</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="13761"> <label class="dd-option-text">CHI Cheryl  Pacyna  (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24618"> <label class="dd-option-text">CHI Cyndy Martinez (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23126"> <label class="dd-option-text">CHI Maria Sacha</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25806"> <label class="dd-option-text">CHI Rick (Richard) Miller (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="21220"> <label class="dd-option-text">CHI Sandra Arriaga (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23608"> <label class="dd-option-text">CHI Shannon  McKeever (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="17944"> <label class="dd-option-text">DAL Amber  Knauss (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26159"> <label class="dd-option-text">DAL Begim Asambaeva (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23547"> <label class="dd-option-text">DAL Corinna Standlee</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25277"> <label class="dd-option-text">DAL Joanna Puyosa (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19909"> <label class="dd-option-text">DAL Karyn Mcnerney (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="16433"> <label class="dd-option-text">DAL Linda  Guerra (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23619"> <label class="dd-option-text">DAL Robyn Ward (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23219"> <label class="dd-option-text">DAL Tyna Chenoweth (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24123"> <label class="dd-option-text">DC Amy Lucas (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24099"> <label class="dd-option-text">DC Carol Antezana (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24631"> <label class="dd-option-text">DC Chloe Schmidt</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25464"> <label class="dd-option-text">DC Dawn Bayer (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26077"> <label class="dd-option-text">DC Diana Cram (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23777"> <label class="dd-option-text">DC Duina Reyes (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23967"> <label class="dd-option-text">DC Jacky Gerste (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26087"> <label class="dd-option-text">DC Lindsey Stoebner (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25489"> <label class="dd-option-text">DC Lisa Spielman (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23125"> <label class="dd-option-text">DC Nadia De Sensi (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23236"> <label class="dd-option-text">DC Rebecca  Harman (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19525"> <label class="dd-option-text">DC Samantha Vieira (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24271"> <label class="dd-option-text">DC SUP-c Katherine Andino (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27317"> <label class="dd-option-text">DC/SUP - c Lauren Emerson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27659"> <label class="dd-option-text">DC/SUP - c Zahra  Siadatmousavi</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27641"> <label class="dd-option-text">DC/SUP-c Katia Kozakevych</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="18688"> <label class="dd-option-text">DEN Angela Prodanova</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20610"> <label class="dd-option-text">DEN Dana Hogan (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26085"> <label class="dd-option-text">DEN Elizabeth Nissen (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26276"> <label class="dd-option-text">DET Caitlyn  Revelle (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23634"> <label class="dd-option-text">DET Suzanne  Reinhard (Dean) (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25351"> <label class="dd-option-text">HOU Lorena  Argueta (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="16956"> <label class="dd-option-text">HOU Lesley  Gutierrez (FC) -</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23310"> <label class="dd-option-text">HOU Marcela Sillero (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24320"> <label class="dd-option-text">HOU Newbell Rincon (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22180"> <label class="dd-option-text">HOU Nicole Burgess</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25715"> <label class="dd-option-text">HOU Sean Rainer</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24328"> <label class="dd-option-text">HOU Simone Leitch (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25950"> <label class="dd-option-text">JAX Tina  Pinheiro-Rodrigues (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="12611"> <label class="dd-option-text">KC Amy  Craig (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23194"> <label class="dd-option-text">LVN Chelsea Kuhn</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22922"> <label class="dd-option-text">LA  Noelani Pasillas</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25324"> <label class="dd-option-text">LA Allison Vanderveen (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24656"> <label class="dd-option-text">LA Courtney Gin (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23620"> <label class="dd-option-text">LA Elizabeth Jackson (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26346"> <label class="dd-option-text">LA Hiromi Ono (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="16179"> <label class="dd-option-text">LA Joanna  Jimenez (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26149"> <label class="dd-option-text">LA Joelle Lavoie (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20608"> <label class="dd-option-text">LA Katie Goodwin (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24600"> <label class="dd-option-text">LA Melanie Maroon (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23883"> <label class="dd-option-text">LA Rachel Hoops (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24867"> <label class="dd-option-text">LA Stephanie Rodriguez (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23251"> <label class="dd-option-text">LOU Kate Reynolds</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25105"> <label class="dd-option-text">MAN Huguette  Ampudia (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23651"> <label class="dd-option-text">MAN Monica Stitt (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25325"> <label class="dd-option-text">MSP Adam Turner (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22239"> <label class="dd-option-text">MSP Jody  Russell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25792"> <label class="dd-option-text">MSP Rachel  Simmons (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25436"> <label class="dd-option-text">NYNJ Amanda Batson (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27386"> <label class="dd-option-text">NYNJ Apolonia Velazquez</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23390"> <label class="dd-option-text">NYNJ Ashley Juan (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23991"> <label class="dd-option-text">NYNJ Carmelita Roman (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27171"> <label class="dd-option-text">NYNJ Cynthia  Dos Santos</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24156"> <label class="dd-option-text">NYNJ Gabriela Glavan (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24884"> <label class="dd-option-text">NYNJ Jennifer Nunez (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25674"> <label class="dd-option-text">NYNJ Joel Diaz (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27252"> <label class="dd-option-text">NYNJ Karen Diaz</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24360"> <label class="dd-option-text">NYNJ Katherine Weber (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27009"> <label class="dd-option-text">NYNJ Lizzette Barona</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23129"> <label class="dd-option-text">NYNJ Nicole Hyder (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24422"> <label class="dd-option-text">NYNJ Vivienne  Zhang (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24300"> <label class="dd-option-text">NYNJ/MANHATTAN - BROOKLYN -Michelle Mitchell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24421"> <label class="dd-option-text">NYNJ/NEWARK Michelle Tyler (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27783"> <label class="dd-option-text">NYNJ/SUP-b Christian Bermudez</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26278"> <label class="dd-option-text">NYNJ/SUP-k Mariela  Murdocco</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="17952"> <label class="dd-option-text">OC Brandi  Hernandez  (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23827"> <label class="dd-option-text">OC Heidi  Reeves (Vetter) (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27343"> <label class="dd-option-text">OC Presley Holloway</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="18932"> <label class="dd-option-text">ORL Brigitta  Edwards (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23645"> <label class="dd-option-text">ORL Lisa  Lotter (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25132"> <label class="dd-option-text">PHL Alexandra Dunlop</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23404"> <label class="dd-option-text">PHL Ambre Payne (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23947"> <label class="dd-option-text">PHL Jamie Campbell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24735"> <label class="dd-option-text">PHL Kathleen  Rentschler (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22683"> <label class="dd-option-text">PHL Kaylee Hinkle (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19229"> <label class="dd-option-text">PHL Marjorie Jones (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23150"> <label class="dd-option-text">PHL Maureen Brant (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="18407"> <label class="dd-option-text">PHL Melissa  Doak (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23657"> <label class="dd-option-text">PHL Nageena Laing (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23120"> <label class="dd-option-text">PHL Stephanie Armstrong (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25100"> <label class="dd-option-text">PHL Valerie  Slattery (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27712"> <label class="dd-option-text">PHX Carlos Poblete Duarte</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22212"> <label class="dd-option-text">PHX Carrie Gabaldon (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25265"> <label class="dd-option-text">PHX Gena Letson (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27034"> <label class="dd-option-text">PHX Linda  Smith</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24296"> <label class="dd-option-text">POR Chelsea Alvey (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23874"> <label class="dd-option-text">POR Rachel Marie</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23748"> <label class="dd-option-text">RAL Jenna Heldreth (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25621"> <label class="dd-option-text">RAL Kelley Murphy</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25964"> <label class="dd-option-text">RIV Becky Horton (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25671"> <label class="dd-option-text">RIV Cecilia Da Silva  (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23635"> <label class="dd-option-text">RIV Hailey Kell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22012"> <label class="dd-option-text">RIV Heather Sweeden (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23688"> <label class="dd-option-text">RIV Jennifer Bayers (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20620"> <label class="dd-option-text">RIV Jennifer (Jenny) Munoz (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27316"> <label class="dd-option-text">SAC Hannah Heathcote</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19215"> <label class="dd-option-text">SAC Lisa Baetz (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27152"> <label class="dd-option-text">SAC Lyndsie Gonzalez</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23919"> <label class="dd-option-text">SAC Sukanya Dass (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26894"> <label class="dd-option-text">SAT Barbara (Barbie) Alvarez</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25390"> <label class="dd-option-text">SAT Brianna Ayala (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20041"> <label class="dd-option-text">SAT Jen Crowder (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23193"> <label class="dd-option-text">SD Carrie Sandoval (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15163"> <label class="dd-option-text">SD Connie  Hanks (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23191"> <label class="dd-option-text">SD Evi Kovacs (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25488"> <label class="dd-option-text">SD Maranda LeFebvre (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23891"> <label class="dd-option-text">SD Rachel Andersen (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23548"> <label class="dd-option-text">SF Sofia  Titvinidze (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27153"> <label class="dd-option-text">SF (SUP-j/k) Pasha Stanford</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26147"> <label class="dd-option-text">SF Alexandra  Marszalec (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25951"> <label class="dd-option-text">SF Becca Hodges (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22404"> <label class="dd-option-text">SF Brittany Lema (VFC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25437"> <label class="dd-option-text">SF Catherine Duong (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26218"> <label class="dd-option-text">SF Crystal Liu (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23325"> <label class="dd-option-text">SF Haley Smith (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24703"> <label class="dd-option-text">SF Karen Jimenez Solis</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23691"> <label class="dd-option-text">SF Lavina Lugo</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24684"> <label class="dd-option-text">SF Melaina  DeHazes (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25855"> <label class="dd-option-text">SF Rhonda Alkharrat (SF)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23895"> <label class="dd-option-text">SF Vicky Nguyen (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22394"> <label class="dd-option-text">SF Victoria Garcia (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27381"> <label class="dd-option-text">9 IH Retouch</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25840"> <label class="dd-option-text">9 OCP Ryan</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="21086"> <label class="dd-option-text">9 Ortus Jose</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="14274"> <label class="dd-option-text">9 Think North</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23589"> <label class="dd-option-text">1 Deanna Pate</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23305"> <label class="dd-option-text">1 Jaimie Huntress</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="18847"> <label class="dd-option-text">1 Meggan  Harper -</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20268"> <label class="dd-option-text">1 Netalia LaConti</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26247"> <label class="dd-option-text">4 Alex Shindler</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19817"> <label class="dd-option-text">4 Ally Palecki</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27597"> <label class="dd-option-text">4 Alyssa Hall</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15208"> <label class="dd-option-text">4 Ashley  Rose</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25243"> <label class="dd-option-text">4 Aubrey Meier</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24128"> <label class="dd-option-text">4 Bailey Sprute</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25507"> <label class="dd-option-text">4 Corinn Sisson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25263"> <label class="dd-option-text">4 Courtney Deutz</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23249"> <label class="dd-option-text">4 Crystal Kepple</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25660"> <label class="dd-option-text">4 DeAnna Gould</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23559"> <label class="dd-option-text">4 Erin Benner</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="16994"> <label class="dd-option-text">4 Erin Larson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25508"> <label class="dd-option-text">4 Haley Becker</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25498"> <label class="dd-option-text">4 Hannah Legere</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22310"> <label class="dd-option-text">4 Jefferson Ortus</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="21026"> <label class="dd-option-text">4 Jen Wickstrum</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24169"> <label class="dd-option-text">4 Jennifer Lymburner</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23184"> <label class="dd-option-text">4 Jo  Diver</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22965"> <label class="dd-option-text">4 Jose Ortus</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24667"> <label class="dd-option-text">4 Julie Nack</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25512"> <label class="dd-option-text">4 KayLee Zubhuza</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26083"> <label class="dd-option-text">4 Kayley Richards</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23705"> <label class="dd-option-text">4 Kylie Decker</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23642"> <label class="dd-option-text">4 Lindsay Groenwald</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24254"> <label class="dd-option-text">4 Maddy Fox</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="27522"> <label class="dd-option-text">4 Margaret Dotson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23847"> <label class="dd-option-text">4 Mariah Young</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20352"> <label class="dd-option-text">4 Melissa  Tobias</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24874"> <label class="dd-option-text">4 Misty Briesemeister</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22311"> <label class="dd-option-text">4 Ricardo Ortus</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23233"> <label class="dd-option-text">4 Rosie Wiegand</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25849"> <label class="dd-option-text">4 Shay de Lira (Stamper)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26309"> <label class="dd-option-text">4 Suzanne McCarthy</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20269"> <label class="dd-option-text">4 Tara Lee</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24704"> <label class="dd-option-text">4 Tedra Schaefer</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15186"> <label class="dd-option-text">4 Tiffany Demas</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23634"> <label class="dd-option-text">DET Suzanne  Reinhard (Dean) (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25851"> <label class="dd-option-text">x 4 Patty Morales</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19034"> <label class="dd-option-text">1 Amber Richardson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19715"> <label class="dd-option-text">1 Amy Hughes</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25218"> <label class="dd-option-text">1 Angela Olson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23314"> <label class="dd-option-text">1 Aubrielle Funk</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23710"> <label class="dd-option-text">1 Autumn Dailey</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="14958"> <label class="dd-option-text">1 Candy  LoSavio -</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20226"> <label class="dd-option-text">1 Heather Faulconer</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23305"> <label class="dd-option-text">1 Jaimie Huntress</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15797"> <label class="dd-option-text">1 Jennifer  Hoffman</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23332"> <label class="dd-option-text">1 Jennifer  Robison</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25245"> <label class="dd-option-text">1 Joni Berg</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19734"> <label class="dd-option-text">1 Julie Heston</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="13050"> <label class="dd-option-text">1 Julie  Klaasmeyer</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25282"> <label class="dd-option-text">1 Kara Prince</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23384"> <label class="dd-option-text">1 Kari Rossetti</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23630"> <label class="dd-option-text">1 Martina Moline</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="18847"> <label class="dd-option-text">1 Meggan  Harper -</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="12381"> <label class="dd-option-text">1 Melissa  Wooden</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20268"> <label class="dd-option-text">1 Netalia LaConti</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15143"> <label class="dd-option-text">1 Rachel Wood</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26072"> <label class="dd-option-text">1 Ria Grossinger</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23233"> <label class="dd-option-text">4 Rosie Wiegand</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22239"> <label class="dd-option-text">MSP Jody  Russell (FC)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="12873"> <label class="dd-option-text">X Carla Stephan</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="12295"> <label class="dd-option-text">Z Carla Stephan</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15143"> <label class="dd-option-text">1 Rachel Wood</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26926"> <label class="dd-option-text">1  AAA DO NOT USE SPACE SAVER DO NOT USE</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25176"> <label class="dd-option-text">1 Debra Mistriel</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25311"> <label class="dd-option-text">1 Elida Garza</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23695"> <label class="dd-option-text">1 Jasmon  Martin</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25250"> <label class="dd-option-text">1 Jeryn Creek</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22673"> <label class="dd-option-text">1 Julie  Ortiz</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24616"> <label class="dd-option-text">1 Kailee Bullock</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="15239"> <label class="dd-option-text">1 Kelley Anderson</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25074"> <label class="dd-option-text">1 Kimberly Lary</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="24009"> <label class="dd-option-text">1 Lauren Lightyear</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="23869"> <label class="dd-option-text">1 Mechelle Brooks</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="20040"> <label class="dd-option-text">1 Pam  Funk</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="26818"> <label class="dd-option-text">1. Shawn Hughes</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="14273"> <label class="dd-option-text">9 Mani Mani</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="19827"> <label class="dd-option-text">ADMIN TEST</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="25678"> <label class="dd-option-text">Jeff Potts (test account)</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="22305"> <label class="dd-option-text">SMP-WEST NO PHOTOGRAPHER ASSIGNED</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="12607"> <label class="dd-option-text">X Tim Hussey (test)</label></a></li></ul></div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+
+$('#filterStaffCombo').ddslick({
+    onSelected: function(data){
+        refreshLeads();
+    }
+});
+
+});
+</script>
+                            </li>
+        
+        <li>							Event Type: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('type');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;">All Event Types</div><select id="filterEventType" name="filterEventType" style="width: 248px; opacity: 0; position: relative; z-index: 100;" onchange="refreshLeads();" class="styled">
+<option value="" selected="selected">All Event Types</option>
+<option value="none">With No Event Type</option>
+<option value="127925">NEWBORN INQUIRY</option>
+<option value="172873">** BOOKING **</option>
+<option value="163469">***HOLD***</option>
+<option value="246736">HR HOLD DO NOT BOOK</option>
+<option value="221508">HOLIIDAY</option>
+<option value="243387">** FAMILY WORKSHOP **</option>
+<option value="237686">SICK</option>
+<option value="222747">** MODEL HOLD **</option>
+<option value="178703">ATL NEWBORN</option>
+<option value="171881">AUS NEWBORN</option>
+<option value="180542">BOS NEWBORN</option>
+<option value="171890">CHI NEWBORN</option>
+<option value="187392">CLT NEWBORN</option>
+<option value="247412">COS NEWBORN</option>
+<option value="171883">DAL NEWBORN</option>
+<option value="179512">DC NEWBORN</option>
+<option value="171857">DEN NEWBORN</option>
+<option value="216013">DET NEWBORN</option>
+<option value="171882">HOU NEWBORN</option>
+<option value="247411">JAX NEWBORN</option>
+<option value="171888">KC NEWBORN</option>
+<option value="171885">LA NEWBORN</option>
+<option value="210914">LOU NEWBORN</option>
+<option value="217645">LVN NEWBORN</option>
+<option value="216430">MAN NEWBORN</option>
+<option value="198067">MSP NEWBORN</option>
+<option value="213323">NYNJ NEWBORN</option>
+<option value="171886">OC NEWBORN</option>
+<option value="176693">ORL NEWBORN</option>
+<option value="173600">PHL NEWBORN</option>
+<option value="184091">PHX NEWBORN</option>
+<option value="171891">POR NEWBORN</option>
+<option value="187208">RAL NEWBORN</option>
+<option value="243459">RIV NEWBORN</option>
+<option value="179940">SAC NEWBORN</option>
+<option value="209146">SAT NEWBORN</option>
+<option value="171884">SD NEWBORN</option>
+<option value="172749">SEA NEWBORN</option>
+<option value="171887">SF NEWBORN</option>
+<option value="196488">SLC NEWBORN</option>
+<option value="192240">TPA NEWBORN</option>
+<option value="129320">TRAINING MODEL SESSION</option>
+<option value="178240">IN HOME MODEL SESSION</option>
+<option value="182416">ATL NEWBORN TWINS</option>
+<option value="243966">ATL NEWBORN TRIPLETS </option>
+<option value="168838">AUS NEWBORN TWINS</option>
+<option value="185050">BOS NEWBORN  - TWINS</option>
+<option value="154013">CHI NEWBORN TWINS</option>
+<option value="189979">CHI-NEWBORN TRIPLETS</option>
+<option value="199711">CLT NEWBORN TWINS</option>
+<option value="166759">DAL NEWBORN TWINS</option>
+<option value="244788">DAL NEWBORN - TRIPLETS</option>
+<option value="182142">DC NEWBORN - TWINS</option>
+<option value="245442">DC NEWBORN TRIPLETS</option>
+<option value="171892">DEN NEWBORN TWINS</option>
+<option value="235188">DET NEWBORN - TWINS</option>
+<option value="168747">HOU NEWBORN TWINS</option>
+<option value="242223">HOU NEWBORN - TRIPLETS</option>
+<option value="248751">JAX NEWBORN TWINS</option>
+<option value="136193">KC NEWBORN-TWINS</option>
+<option value="139685">LA NEWBORN-TWINS</option>
+<option value="210915">LOU NEWBORN TWINS</option>
+<option value="228705">LVN NEWBORN - TWINS</option>
+<option value="221689">MAN NEWBORN TWINS</option>
+<option value="205422">MSP NEWBORN - TWINS</option>
+<option value="213492">NYNJ NEWBORN TWINS</option>
+<option value="235478">NYNJ NEWBORN TRIPLETS</option>
+<option value="136190">OC NEWBORN-TWINS</option>
+<option value="232122">OC NEWBORN  -TRIPLETS</option>
+<option value="184004">ORL NEWBORN - TWINS</option>
+<option value="176146">PHL NEWBORN TWINS</option>
+<option value="208921">PHL NEWBORN TRIPLETS</option>
+<option value="188412">PHX NEWBORN TWINS</option>
+<option value="171893">POR NEWBORN TWINS</option>
+<option value="245707">POR NEWBORN TRIPLETS</option>
+<option value="198296">RAL NEWBORN  - TWINS</option>
+<option value="243460">RIV NEWBORN - TWINS</option>
+<option value="186989">SAC NEWBORN-TWINS</option>
+<option value="227701">SAC NEWBORN - TRIPLETS</option>
+<option value="209147">SAT NEWBORN - TWINs</option>
+<option value="180944">SEA NEWBORN TWINS</option>
+<option value="158174">SF NEWBORN TWINS</option>
+<option value="178448">SD NEWBORN TWINS</option>
+<option value="136757">SD NEWBORN-TRIPLETS</option>
+<option value="192241">TPA NEWBORN - TWINS</option>
+<option value="149467">PHOTOGRAPHER WORKSHOP</option>
+<option value="218775">TENTATIVE Photographer Workshop</option>
+<option value="153844">ONBOARDING</option>
+<option value="182492">PAYROLL CLOSE OUT</option>
+<option value="182493">TX SALES TAX DUE</option>
+<option value="182491">TRAINING DATE</option>
+<option value="195437">GIFT CARD PURCHASE</option>
+<option value="198857">BOOKING STAFF TIME OFF</option>
+<option value="232699">BUF NEWBORN</option>
+<option value="181877">NAS NEWBORN</option>
+<option value="187393">NAS NEWBORN - TWINS</option>
+<option value="209812">RIC NEWBORN</option>
+<option value="209813">RIC NEWBORN - TWINS</option>
+</select></div>
+</span>
+</li>
+        <li>							Archived Status: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('view');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;">Active Leads</div><select id="viewFilterCombo" name="viewFilterCombo" style="width: 248px; opacity: 0; position: relative; z-index: 100;" onchange="refreshLeads();" class="styled">
+<option value="" selected="selected">Active Leads</option>
+<option value="archived">Only Archived Leads</option>
+<option value="all">All Active and Archived Leads</option>
+</select></div>
+</span>
+</li>
+        <li>
+            Referral Source: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('referral');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+            <span style="float: left; ">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="referralSourceCombo" name="referralSourceCombo" style="width: 248px; opacity: 0; position: relative; z-index: 100;" onchange="refreshLeads();" class="styled">
+<option value=""> -- </option>
+<option value="nonelinked">No Referrer Linked</option>
+<option value="20276">A "Friend"</option>
+<option value="18902">Facebook</option>
+<option value="18900">Google</option>
+<option value="19873">Online</option>
+<option value="20008">Previous Client</option>
+<option value="20363">SMP Instagram</option>
+<option value="18901">Yelp</option>
+<option value="20194">$25 OFF US EXP San Marcos</option>
+<option value="20199">25/25 Promo</option>
+<option value="25843">Annie Hewitt</option>
+<option value="30017">ATL Nicole Stephens</option>
+<option value="25303">AUS Katherine Drye</option>
+<option value="29031">BOS Jennifer Zall</option>
+<option value="32046">BOS Nancy Terlato</option>
+<option value="21972">CARLA STEPHAN</option>
+<option value="27469">CHI Candy LoSavio</option>
+<option value="21399">CHI Cheryl Pacyna</option>
+<option value="36547">CHI April Martinez</option>
+<option value="19931">Chris - Carla's Husband</option>
+<option value="20275">Christal McCamant (Carla's Hairdresser)</option>
+<option value="27016">Clearview Ultrasound AUS</option>
+<option value="32480">CLT Becky Johnson</option>
+<option value="31468">DAL AMY SMITH</option>
+<option value="34736">DAL Corinna Standlee</option>
+<option value="34967">DC Dawn Bayer</option>
+<option value="25209">DAL Ivy Nault</option>
+<option value="25436">DAL Linda Guerra</option>
+<option value="29654">DAL Karyn Mcnerney</option>
+<option value="29174">DC Samantha Vieira</option>
+<option value="27268">DEN Alyssa Henson</option>
+<option value="27561">DEN Ashley Knoll</option>
+<option value="29696">DEN Dana Hogan</option>
+<option value="22033">Dr. Dang</option>
+<option value="26352">Dr's Office</option>
+<option value="21214">DSM BABY FAIR</option>
+<option value="25908">Fit for Mom</option>
+<option value="22615">Forever Yours Ultrasound</option>
+<option value="25016">GGMG</option>
+<option value="26347">Gift Certificate</option>
+<option value="30910">HOU Lesley Gutierrez</option>
+<option value="28967">HOU Monette Sheridan</option>
+<option value="20095">Julie K.</option>
+<option value="23577">KC Amy Craig</option>
+<option value="26560">KC Baby Fair </option>
+<option value="22790">KC Parents of Multiples</option>
+<option value="33795">LA Melanie Maroon</option>
+<option value="24580">Marin Mother's Group</option>
+<option value="20429">Model Session</option>
+<option value="19890">Mommy &amp; Me 4D US</option>
+<option value="31737">MSP Jody Russell</option>
+<option value="27458">Nextdoor.com - Dallas</option>
+<option value="23110">NextDoor.com - Los Angeles</option>
+<option value="22944">Nextdoor.com - San Diego</option>
+<option value="22827">NextDoor.com Chicago</option>
+<option value="20277">None Listed</option>
+<option value="32503">NYNJ Ashley Juan</option>
+<option value="33724">NYNJ Carmelita Alfaro</option>
+<option value="28586">ORL Meggan Harper</option>
+<option value="20457">OSOA </option>
+<option value="27017">Other</option>
+<option value="20246">Other Photographer</option>
+<option value="35553">PHL AMBRE PAYNE</option>
+<option value="33275">PHL Kaylee Hinkle</option>
+<option value="32553">PHL Marjorie Jones</option>
+<option value="35505">PHL Maureen Brandt</option>
+<option value="27720">PHL Melissa Doak</option>
+<option value="23649">Postcard</option>
+<option value="21450">PreNatal Fit (Chicago)</option>
+<option value="22985">Prenatal Vision (DSM)</option>
+<option value="24383">Sarah Perkins</option>
+<option value="29370">SAT Jen Crowder</option>
+<option value="23637">SD Angela Levy</option>
+<option value="23648">SD Connie Hanks</option>
+<option value="32877">SF Lavina Lugo</option>
+<option value="34649">SD Rachel Anderson</option>
+<option value="28456">SF RACHEL JONES</option>
+<option value="21773">SMP WEBSITE</option>
+<option value="20274">Sonohealth</option>
+<option value="25337">Stork Vision 3D - Dallas</option>
+<option value="33763">TikToc</option>
+</select></div>
+</span>
+        </li>
+        <li>
+                                Filter Category: <div class="pull-right"><button class="btn btn-xs  btn-white" type="button" onclick="clearFilter('category');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <select id="filterCategory" name="filterCategory" style="width: 150px; display: none;" onchange="refreshLeads();" multiple="multiple" class="styled">
+<option value="none">No categories assigned</option>
+<option value="94979">NOT A CURRENT MARKET</option>
+<option value="108748">BAD ZIP CODE</option>
+<option value="83301">ATLANTA</option>
+<option value="80461">AUSTIN</option>
+<option value="85648">BOSTON</option>
+<option value="121090">BUFFALO</option>
+<option value="90951">CHARLOTTE</option>
+<option value="80458">CHICAGO</option>
+<option value="130273">COLORADO SPRINGS</option>
+<option value="112270">CONNECTICUT</option>
+<option value="80459">DALLAS</option>
+<option value="83245">DC</option>
+<option value="90990">DELAWARE</option>
+<option value="80463">DENVER</option>
+<option value="111595">DETROIT</option>
+<option value="80462">HOUSTON</option>
+<option value="110124">JACKSONVILLE</option>
+<option value="80457">KANSAS CITY</option>
+<option value="80453">LOS ANGELES</option>
+<option value="107581">LA SANTA BARBARA</option>
+<option value="108711">LOUISVILLE</option>
+<option value="110239">MARYLAND</option>
+<option value="110038">MANHATTAN</option>
+<option value="100800">MINNEAPOLIS</option>
+<option value="92767">NEW HAMPSHIRE</option>
+<option value="82434">NEW JERSEY - PA</option>
+<option value="117073">NEW JERSEY - NY</option>
+<option value="109501">NEW YORK</option>
+<option value="118252">NEW YORK - BROOKLYN/QUEENS</option>
+<option value="118251">NEW YORK - LONG ISLAND</option>
+<option value="118253">NEW YORK - WHITE PLAINS</option>
+<option value="118254">NEW YORK - BRONX/YONKERS</option>
+<option value="80452">ORANGE COUNTY</option>
+<option value="82767">ORLANDO</option>
+<option value="80464">PHILADELPHIA</option>
+<option value="89966">PHOENIX</option>
+<option value="80466">PORTLAND</option>
+<option value="90882">RALEIGH </option>
+<option value="90989">RHODE ISLAND</option>
+<option value="107890">RICHMOND</option>
+<option value="107580">RIVERSIDE</option>
+<option value="83302">SACRAMENTO</option>
+<option value="80460">SAN ANTONIO</option>
+<option value="80451">SAN DIEGO</option>
+<option value="80454">SAN FRANCISCO</option>
+<option value="80455">SF EAST BAY</option>
+<option value="80456">SF-SAN JOSE</option>
+<option value="80465">SEATTLE</option>
+<option value="113490">VEGAS</option>
+<option value="110237">VIRGINIA</option>
+<option value="90952">HRVA PENINSULA (WILLIAMSBURG/NEWPORT NEWS/HAMPTON) - EXPANSION</option>
+<option value="90953">HRVA SOUTHSIDE (NORFOLK/VA BEACH/CHESAPEAKE) - EXPANSION</option>
+<option value="89887">SERVER RESEND</option>
+<option value="89728">NAS75OFF</option>
+<option value="81486">DES MOINES (Referred to Sarah)</option>
+<option value="109353">COMING SOON</option>
+<option value="116388">NEVER BOOK AGAIN</option>
+<option value="111812">OFFER EMAIL NOT OPENED</option>
+<option value="104814">#PHONE#</option>
+<option value="115588">MODEL INQUIRY</option>
+<option value="99602">SALT LAKE CITY</option>
+</select><a href="javascript:void(0);" class="ui-multiselect ui-widget ui-state-default ui-corner-all" aria-haspopup="true" style="width: 261px;"><span class="ui-icon ui-icon-triangle-2-n-s"></span><span>Filter by Category...</span></a>
+</span>
+                                <div class="leftTitle">
+            <div class="leftTitle" style="margin-top: 5px; margin-right: 5px;">
+                Match: 
+            </div>
+                                                                <div class="cmf-skinned-select" style="width: 92px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 64px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;">ANY</div><select id="category_filter_type" name="category_filter_type" style="width: 78px; opacity: 0; position: relative; z-index: 100;" onclick="refreshLeads();" class="styled">
+<option value="any" selected="selected">ANY</option>
+<option value="all">ALL</option>
+</select></div>
+                </div>
+        </li>
+        
+        <li>
+                                                
+            First Contact: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('firstcontact');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="firstContactStart" name="firstContactStart" size="25" class="textBlock date_picker textBlock dateFieldLeftAlign" maxlength="" value="03/27/2025" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day selected" date="03/27/2025">27</td><td class="selectable_day today" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+            <div style="float: left; margin-left: 10px; margin-right: 10px; margin-top: 5px;"> to </div>
+            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="firstContactEnd" name="firstContactEnd" size="25" class="textBlock date_picker textBlock dateFieldRightAlign" maxlength="" value="03/27/2025" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day selected" date="03/27/2025">27</td><td class="selectable_day today" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+            </div>
+        </li>
+        <li>
+            Event Date: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('eventdate');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="eventDateStart" name="eventDateStart" size="25" class="textBlock date_picker textBlock dateFieldLeftAlign" maxlength="" value="" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day" date="03/27/2025">27</td><td class="selectable_day today selected" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+            <div style="float: left; margin-left: 10px; margin-right: 10px; margin-top: 5px;"> to </div>
+            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="eventDateEnd" name="eventDateEnd" size="25" class="textBlock date_picker textBlock dateFieldRightAlign" maxlength="" value="" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day" date="03/27/2025">27</td><td class="selectable_day today selected" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+            </div>
+        </li>
+        <li>					Filter Read/Unread: <div class="pull-right"><button class="btn btn-xs btn-white" type="button" onclick="clearFilter('readunread');"><span class="fa fa-times font-red-flamingo"></span></button></div>
+<span style="float: left; ">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;">Any</div><select id="readUnreadCombo" name="readUnreadCombo" style="width: 248px; opacity: 0; position: relative; z-index: 100;" onchange="refreshLeads();" class="styled">
+<option value="" selected="selected">Any</option>
+<option value="read">Read</option>
+<option value="unread">Unread (New)</option>
+</select></div>
+</span>
+</li>
+            
+        
+        <script type="text/javascript">
+            function clearCustomFilter(itemID,type) {
+                switch(type) {
+                    case "1":
+                        //Add a text field
+                        $("#item_" + itemID).val('');
+                        break;
+                    case "2":
+                        // Add a text area
+                        $("#item_" + itemID).val('');
+                        break;
+                    case "3":
+                        //Display Text (No Input)
+                        // Do nothing, the label is the display text
+                        break;
+                    case "4":
+                        $("#item_" + itemID).val('');
+                        $("#item_" + itemID).change();
+                        
+                        $('#objectListingCustomFieldFilters input:radio[name=item_' + itemID + ']').attr('checked',false);
+                        $('#objectListingCustomFieldFilters input:checkbox[id=item_' + itemID + ']').attr('checked',false);
+                        
+                        break;
+                    case "5":
+                        //Yes/No
+                        $("#item_" + itemID).iButton('toggle',false);
+                        break;
+                    case "6":
+                        //Star Rating
+                        $('div#item_' + itemID).raty({
+                            score: 		''
+                        });
+                        break;
+                    case "7":
+                        //Numeric Range 0-10, 1-20, etc...
+                        $("#item_" + itemID).val('');
+                        $("#item_" + itemID).change();
+                        break;
+                    case "8":
+                        //Date
+                        $("#item_" + itemID).val('');
+                        break;
+                    case "9":
+                        //TIme
+                        $("#item_" + itemID + "_chooser").val('');
+                        $("#item_" + itemID).val('');
+                        break;
+                }
+                refreshLeads();
+            }
+        </script>
+        <div id="objectListingCustomFieldFilters">
+                                                    
+                <br style="clear: both;">
+                <div class="headerTitle">
+                    Custom Fields: <br>
+                    <hr class="hrSlim">
+                </div>
+                <br style="clear: both;">
+                                                                    <li style="width:300px; position: relative;">
+                            
+                            Event Date: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('17258','8');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="item_17258" name="item_17258" size="25" class="textBlock date_picker dateFieldLeftAlign" maxlength="" value="" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day" date="03/27/2025">27</td><td class="selectable_day today selected" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <br style="clear:both;">
+                        <hr class="hrSlim">
+                        <br style="clear:both;">
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            ZAPIER GENERATED LEAD?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15392','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15392" name="item_15392" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            RETOUCHING LEVEL REQUIRED: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('17417','6');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">														<script type="text/javascript">
+                            $(function() {
+                                $('div#item_17417').raty({
+                                'hints':		['1', '2', '3', '4', '5'], //['bad', 'poor', 'regular', 'good', 'gorgeous'],
+                                'number':       2,
+                                readOnly:     false,
+                                'scoreName':    'item_17417-score',
+                                'cancel':   true,
+                                'showHalf':     false,
+                                score: 		''
+                                });
+                            });
+                            </script>
+                            <div id="item_17417" class="starRating" style="cursor: pointer; width: 60px;"><img src="/admin/icons/cancel.png" alt="x" title="cancel this rating!" class="raty-cancel">&nbsp;<img src="/admin/icons/star-off.png" alt="1" title="1">&nbsp;<img src="/admin/icons/star-off.png" alt="2" title="2"><input type="hidden" name="item_17417-score" id="item_17417-score"></div>
+                            </div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            FINAL PACKAGE ORDERED: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15670','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="item_15670" name="item_15670" style="width: 248px; opacity: 0; position: relative; z-index: 100;" class="styled">
+<option value=""> -- </option>
+<option value="NO UPGRADE">NO UPGRADE</option>
+<option value="12 Images">12 Images</option>
+<option value="20 Images">20 Images</option>
+<option value="40-55 Images">40-55 Images</option>
+<option value="65+">65+</option>
+<option value="100">100</option>
+<option value="120">120</option>
+</select></div>
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Session Time (in minutes): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('16595','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">				<input type="radio" id="item_16595" name="item_16595" class="" value="Under 120 minutes"> Under 120 minutes<br>
+<input type="radio" id="item_16595" name="item_16595" class="" value="120 - 240 minutes"> 120 - 240 minutes<br>
+<input type="radio" id="item_16595" name="item_16595" class="" value="Over 240 minutes"> Over 240 minutes<br>
+<br class="clearBoth"></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Enter the timestamps of your first and last images shot. (NOT the time you uploaded them): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15926','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15926" name="item_15926" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Shooting Time: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('13517','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_13517" name="item_13517" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            How did you hear about us? (e.g. Facebook, Google, Instagram, Yelp, friend): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11969','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_11969" name="item_11969" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            ASSIGNED PHOTOGRAPHER: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11721','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_11721" name="item_11721" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Can you provide parking with no time limit or fees?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('13804','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_13804" name="item_13804" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Is your home on the ground floor or elevator accessible? Click for Yes: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('16318','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_16318" name="item_16318" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            I consent to share my images for social media and marketing (no private information shared): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('8223','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="item_8223" name="item_8223" style="width: 248px; opacity: 0; position: relative; z-index: 100;" class="styled">
+<option value=""> -- </option>
+<option value="Yes, permission granted">Yes, permission granted</option>
+<option value="No, permission to photograph only">No, permission to photograph only</option>
+</select></div>
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Would you like to capture parent and/or sibling images? (no additional package cost): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11970','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_11970" name="item_11970" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Do you have pets? If yes, describe: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('16898','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_16898" name="item_16898" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Has your baby arrived yet?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('8226','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_8226" name="item_8226" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            If your baby has already arrived, what day was your baby born?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('8229','8');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><div class="jdpicker_w"><input type="text" id="item_8229" name="item_8229" size="25" class="textBlock date_picker dateFieldLeftAlign" maxlength="" value="" autocomplete="new-password"><div class="date_selector" style=""><div class="nav"><div class="error_msg"></div><p class="month_nav"><span class="button prev" title="[Page-Up]">«</span> <span class="month_name">March</span> <span class="button next" title="[Page-Down]">»</span></p><p class="year_nav"><span class="button prev" title="[Ctrl+Page-Up]">«</span> <span class="year_name" id="year_name">2025</span> <span class="button next" title="[Ctrl+Page-Down]">»</span></p></div><table><thead><tr><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th></tr></thead><tbody><tr><td class="unselected_month" date="02/23/2025">23</td><td class="unselected_month" date="02/24/2025">24</td><td class="unselected_month" date="02/25/2025">25</td><td class="unselected_month" date="02/26/2025">26</td><td class="unselected_month" date="02/27/2025">27</td><td class="unselected_month" date="02/28/2025">28</td><td class="selectable_day" date="03/01/2025">1</td></tr><tr><td class="selectable_day" date="03/02/2025">2</td><td class="selectable_day" date="03/03/2025">3</td><td class="selectable_day" date="03/04/2025">4</td><td class="selectable_day" date="03/05/2025">5</td><td class="selectable_day" date="03/06/2025">6</td><td class="selectable_day" date="03/07/2025">7</td><td class="selectable_day" date="03/08/2025">8</td></tr><tr><td class="selectable_day" date="03/09/2025">9</td><td class="selectable_day" date="03/10/2025">10</td><td class="selectable_day" date="03/11/2025">11</td><td class="selectable_day" date="03/12/2025">12</td><td class="selectable_day" date="03/13/2025">13</td><td class="selectable_day" date="03/14/2025">14</td><td class="selectable_day" date="03/15/2025">15</td></tr><tr><td class="selectable_day" date="03/16/2025">16</td><td class="selectable_day" date="03/17/2025">17</td><td class="selectable_day" date="03/18/2025">18</td><td class="selectable_day" date="03/19/2025">19</td><td class="selectable_day" date="03/20/2025">20</td><td class="selectable_day" date="03/21/2025">21</td><td class="selectable_day" date="03/22/2025">22</td></tr><tr><td class="selectable_day" date="03/23/2025">23</td><td class="selectable_day" date="03/24/2025">24</td><td class="selectable_day" date="03/25/2025">25</td><td class="selectable_day" date="03/26/2025">26</td><td class="selectable_day" date="03/27/2025">27</td><td class="selectable_day today selected" date="03/28/2025">28</td><td class="selectable_day" date="03/29/2025">29</td></tr><tr><td class="selectable_day" date="03/30/2025">30</td><td class="selectable_day" date="03/31/2025">31</td><td class="unselected_month" date="04/01/2025">1</td><td class="unselected_month" date="04/02/2025">2</td><td class="unselected_month" date="04/03/2025">3</td><td class="unselected_month" date="04/04/2025">4</td><td class="unselected_month" date="04/05/2025">5</td></tr></tbody></table></div><div class="date_clearer">&nbsp;</div></div></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Baby's Last Name: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11722','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_11722" name="item_11722" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Baby's First Name: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('14924','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_14924" name="item_14924" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Baby's Gender: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11723','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="item_11723" name="item_11723" style="width: 248px; opacity: 0; position: relative; z-index: 100;" class="styled">
+<option value=""> -- </option>
+<option value="Boy">Boy</option>
+<option value="Girl">Girl</option>
+<option value="Boy/Girl Twins">Boy/Girl Twins</option>
+<option value="Boy/Boy Twins">Boy/Boy Twins</option>
+<option value="Girl/Girl Twins">Girl/Girl Twins</option>
+<option value="Triplets">Triplets</option>
+</select></div>
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Baby's Gender: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('18389','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">    <div class="cmf-skinned-select" style="width: 262px; height: 28px; background-color: rgb(18, 18, 18); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 234px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="item_18389" name="item_18389" style="width: 248px; opacity: 0; position: relative; z-index: 100;" class="styled">
+<option value=""> -- </option>
+<option value="It's a surprise!">It's a surprise!</option>
+<option value="Boy">Boy</option>
+<option value="Girl">Girl</option>
+<option value="Boy/Girl Twins">Boy/Girl Twins</option>
+<option value="Boy/Boy Twins">Boy/Boy Twins</option>
+<option value="Girl/Girl Twins">Girl/Girl Twins</option>
+<option value="Triplets">Triplets</option>
+</select></div>
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            PHOTOGRAPHER SUMMARY OF SESSION: Describe how the session went for you and the client. Please note any concerns and contact your area manager directly if any concerns may need to be addressed immediately.: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('10203','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_10203" name="item_10203" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            EDITOR NOTES/COMMENTS:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('8220','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_8220" name="item_8220" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            NOTES FOR RETOUCHING: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('12940','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_12940" name="item_12940" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            POST-RETOUCHING NOTES  (AUDITS): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('14099','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_14099" name="item_14099" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            PAID CUSTOM EDIT REQUESTS: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('18556','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_18556" name="item_18556" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Comments or questions? (optional): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('11971','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_11971" name="item_11971" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Do you have any concerns regarding this gallery?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15125','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15125" name="item_15125" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Confirm Event ID:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15158','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15158" name="item_15158" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Were you on time to the session?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15118','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15118" name="item_15118" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Please enter the total time you spent at the session:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15168','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15168" name="item_15168" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Number of images to upload:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15113','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15113" name="item_15113" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Have you confirmed the correct images and number of images have uploaded successfully and are in RAW format?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15114','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15114" name="item_15114" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            I agree to back-up and store all RAW files taken at this session for 90 days.: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15167','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">			<label>
+<input type="checkbox" id="item_15167" name="item_15167[]" class="" value="Yes"> Yes			</label>
+<br></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did you photograph the grey card for background fabrics?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15629','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15629" name="item_15629" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Check all fabrics used on beanbag:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15159','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Ivory"> Ivory			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Pink"> Pink			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Grey"> Grey			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Oatmeal"> Oatmeal			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Taupe"> Taupe			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="NEW Kit Refresh Aqua"> NEW Kit Refresh Aqua			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Dark Blue"> Dark Blue			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Berry"> Berry			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Light Green"> Light Green			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Dark GREEN"> Dark GREEN			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Pink Floral"> Pink Floral			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Distressed"> Distressed			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="White Lace"> White Lace			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Green Lace"> Green Lace			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Purple Lace"> Purple Lace			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Floral"> Floral			</label>
+<br>			<label>
+<input type="checkbox" id="item_15159" name="item_15159[]" class="" value="Other (list below)"> Other (list below)			</label>
+<br></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            List other fabrics used on beanbag:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15160','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15160" name="item_15160" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Are any of the fabrics visibly soiled or damaged in the images?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15116','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15116" name="item_15116" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            If yes, please specify which sets were soiled/damaged.: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15123','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15123" name="item_15123" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did you photograph the grey card for the floor drops?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15630','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15630" name="item_15630" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Check all floors used:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15161','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Ivory Wood Floor"> Ivory Wood Floor			</label>
+<br>			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Brown Wood Floor"> Brown Wood Floor			</label>
+<br>			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Family Backdrop as floor - Dark"> Family Backdrop as floor - Dark			</label>
+<br>			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Family Backdrop as floor - Light"> Family Backdrop as floor - Light			</label>
+<br>			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Marble Floor"> Marble Floor			</label>
+<br>			<label>
+<input type="checkbox" id="item_15161" name="item_15161[]" class="" value="Other (list below)"> Other (list below)			</label>
+<br></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            List other floors used:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15162','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15162" name="item_15162" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did you photograph the grey card for the family/sibling images: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15631','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15631" name="item_15631" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            List all poses captured:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15164','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Nest "> Beanbag - Nest 			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Side-lying"> Beanbag - Side-lying			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Bottoms-up"> Beanbag - Bottoms-up			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Womb"> Beanbag - Womb			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Heads-up"> Beanbag - Heads-up			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Tucked In"> Beanbag - Tucked In			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Beanbag - Huck Finn"> Beanbag - Huck Finn			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Bucket "> Bucket 			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Fur - Nest"> Fur - Nest			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Swing "> Swing 			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Basket"> Basket			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Heads up in Basket"> Heads up in Basket			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Upright in Basket"> Upright in Basket			</label>
+<br>			<label>
+<input type="checkbox" id="item_15164" name="item_15164[]" class="" value="Other (list below)"> Other (list below)			</label>
+<br></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Were family images taken? Please check all that apply:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15122','4');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Parent Pictures"> Parent Pictures			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Sibling Pictures"> Sibling Pictures			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Family Pictures"> Family Pictures			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Silhouettes"> Silhouettes			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Pet Pictures"> Pet Pictures			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="Other (list below)"> Other (list below)			</label>
+<br>			<label>
+<input type="checkbox" id="item_15122" name="item_15122[]" class="" value="None Taken"> None Taken			</label>
+<br></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            List other poses photographed:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15165','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15165" name="item_15165" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did you capture macro images?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15166','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_15166" name="item_15166" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Was there anything specific requested or noted that the family cared about most to include in their proofing gallery?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15119','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15119" name="item_15119" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did parents have any specific editing requests? (Birthmarks: leaving/removing, storkbites, etc.) (Lanugo: leaving as-is or lessen appearance?) (Lanugo can not be "removed".): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15120','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15120" name="item_15120" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Please detail your concerns below and contact your regional manager by phone with any concerns that need to be addressed immediately.: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15121','2');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15121" name="item_15121" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            List other family images photographed:: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15163','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15163" name="item_15163" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Did you reach out to your regional manager regarding any specific concerns?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('16335','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_16335" name="item_16335" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Do you have an intro call due today?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('17360','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_17360" name="item_17360" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Have you made your intro call?: <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('17361','5');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;">	<div class="ibutton-container" style="width: 20px;"><input type="checkbox" id="item_17361" name="item_17361" class="{labelOn: 'Yes', labelOff: 'No' , change: function(inputVal) {  } }" value="1" xclass="styled"><div class="ibutton-handle" style="width: 0px; left: 0px;"><div class="ibutton-handle-right"><div class="ibutton-handle-middle"></div></div></div><div class="ibutton-label-off" style="width: 15px;"><span style="margin-right: 0px;"><label>No</label></span></div><div class="ibutton-label-on" style="width: 4px;"><span style="margin-left: -14px;"><label>Yes</label></span></div><div class="ibutton-padding-left"></div><div class="ibutton-padding-right"></div></div> 	
+</div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                                            <li style="width:300px; position: relative;">
+                            
+                            Session Time (in minutes): <div class="pull-right" style="position: absolute; right: -25px; top: -6px;"><button class="btn btn-xs btn-white" type="button" onclick="clearCustomFilter('15669','1');"><span class="fa fa-times font-red-flamingo"></span></button></div><br>
+                            <div style="float: left;"><input type="text" id="item_15669" name="item_15669" size="35" class="form-control" maxlength="" value=""></div>
+                            <div style="right: -35px; margin-top: 4px; position: absolute;">
+                                <button type="button" class="btn blue btn-xs" onclick="refreshLeads();"><span class="fa fa-check"></span></button>
+                            </div>
+                        </li>
+                                                            </div>
+        
+        
+    </ul>
+</nav>

@@ -1,0 +1,89 @@
+Question 1 - What is usually the first activity in the hacking process?
+A) Scanning
+B) Enumeration
+C) Reconnaissance
+D) Surveillance
+
+Question 2 - Which of the following might a hacker offer as a service?
+A) DoS attack
+B) Spam distribution
+C) Password cracking
+D) All of the above
+
+Question 3 - Which IT domain is most vulnerable to social engineering?
+A) LAN-to-WAN Domain
+B) User Domain
+C) Remote Access Domain
+D) LAN Domain
+
+Question 4 - What type of attack can result in arbitrary code execution with system-level privileges?
+A) Buffer overflow
+B) Eavesdropping
+C) SQL injection
+D) Session hijacking
+
+Question 5 - What is a type of social engineering technique?
+A) Impersonation
+B) Creating urgency
+C) Both A and B
+D) Neither A nor B
+
+Question 6 - Which of the following types of attacks is invulnerable to technical countermeasures?
+A) Denial of Service (DoS)
+B) Cross-site scripting
+C) Session hijacking
+D) Social engineering
+
+Question 7 - Any host that uses TCP/IP without encryption is vulnerable to ____________.
+A) Denial of Service (DoS)
+B) DNS poisoning
+C) session hijacking
+D) social engineering
+
+Question 8 - A ________ attack occurs when a hacker intervenes in a communication session between a client and a server. The attack usually involves fooling or tricking the client into initiating the session with the hacker&#39;s computer instead of with the intended server.
+A) buffer overflow
+B) man-in-the-middle
+C) ICMP redirect
+D) Distributed Denial of Service (DdoS)
+
+Question 9 - Which of the following does not represent a common threat to an organization&#39;s network security?
+A) Opportunistic hacker
+B) Contract worker
+C) Part-time employee
+D) Disgruntled employee
+
+Question 10 - A ________ is a mechanism of distribution or delivery more than a specific type of malware.
+A) Trojan
+B) virus
+C) worm
+D) logic bomb
+
+Question 11 - Which of the following is not a common hacker motivation?
+A) Peer pressure
+B) Thrill seeking
+C) Ethical behavior
+D) Financial gain
+
+Question 12 - Which group is responsible for the highest percentage of organizational security breaches?
+A) Script kiddies
+B) Internal personnel
+C) Professional hackers
+D) Contract workers
+
+Question 13 - During which phase of the hacking process does footprinting take place?
+A) Scanning
+B) Enumeration
+C) Reconnaissance
+D) Surveillance
+
+Question 14 - During which phase of the hacking process does war dialing, war driving, or ping sweeps take place?
+A) Scanning
+B) Enumeration
+C) Reconnaissance
+D) Surveillance
+
+Question 15 - From the perspective of a hacker, what is a primary difference between wired and wireless networks?
+A) The hacker must first obtain a network connection to a wired network to launch an attack.
+B) The hacker must gain physical proximity to a wireless target to make direct contact with it.
+C) The hacker doesn&#39;t have to be physically close to a wireless network to launch an attack.
+D) None of the above

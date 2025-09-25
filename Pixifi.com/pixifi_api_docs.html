@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixifi API Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            text-align: center;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        #searchInput {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #searchInput:focus {
+            border-color: #667eea;
+        }
+
+        .api-section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+        }
+
+        .api-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .endpoint {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .endpoint:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .endpoint h3 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .method {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-right: 10px;
+        }
+
+        .method.GET { background: #28a745; color: white; }
+        .method.POST { background: #007bff; color: white; }
+        .method.DELETE { background: #dc3545; color: white; }
+
+        .url {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .description {
+            margin: 15px 0;
+            color: #6c757d;
+        }
+
+        .parameters {
+            margin: 15px 0;
+        }
+
+        .parameters h4 {
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .parameter {
+            background: white;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-left: 3px solid #007bff;
+            font-family: monospace;
+        }
+
+        .parameter .param-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .parameter .param-type {
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .external-api {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+
+        .external-api .endpoint {
+            background: #fff3cd;
+            border-color: #ffeaa7;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stat {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .stat h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+
+            .stat {
+                margin: 10px 0;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pixifi API Documentation</h1>
+            <p>Comprehensive documentation of all API endpoints used in Pixifi Tampermonkey scripts</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search API endpoints...">
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>Internal APIs</h3>
+                <p>25+ Endpoints</p>
+            </div>
+            <div class="stat">
+                <h3>External APIs</h3>
+                <p>4 Services</p>
+            </div>
+            <div class="stat">
+                <h3>Categories</h3>
+                <p>8 Sections</p>
+            </div>
+        </div>
+
+        <div id="apiContent">
+
+            <!-- Leads API Section -->
+            <section class="api-section" id="leads-section">
+                <h2>🔍 Leads APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Leads</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/leads/getLeads/</div>
+                    <div class="description">Retrieves a paginated list of leads with filtering options. Used for lead searching and listing functionality.</div>
+                    <div class="parameters">
+                        <h4>Parameters:</h4>
+                        <div class="parameter">
+                            <span class="param-name">page</span> <span class="param-type">(number)</span> - Page number for pagination
+                        </div>
+                        <div class="parameter">
+                            <span class="param-name">filterData</span> <span class="param-type">(object)</span> - Filter criteria for leads
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Update Lead Data</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/data/af/leaddata/</div>
+                    <div class="description">Updates various lead data fields including address, brand, timezone, and other custom fields.</div>
+                    <div class="parameters">
+                        <h4>Parameters:</h4>
+                        <div class="parameter">
+                            <span class="param-name">leadID</span> <span class="param-type">(number)</span> - Lead identifier
+                        </div>
+                        <div class="parameter">
+                            <span class="param-name">fieldData</span> <span class="param-type">(object)</span> - Field data to update
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Assign Staff to Lead</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/leads/assignStaffToLead/</div>
+                    <div class="description">Assigns staff members to a specific lead.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Refresh Lead Staff Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/leads/refreshLeadStaffListing/</div>
+                    <div class="description">Refreshes the staff listing for a lead after assignments.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Update Lead Status</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/leads/updateStatusOfLead/</div>
+                    <div class="description">Updates the status of a lead (e.g., converting, archiving).</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Update Lead Priority</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/data/updateLeadPriority/</div>
+                    <div class="description">Updates the priority level of a lead.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Remove Staff from Lead</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/leads/removeStaffFromLead/</div>
+                    <div class="description">Removes staff assignment from a lead.</div>
+                </div>
+            </section>
+
+            <!-- Events API Section -->
+            <section class="api-section" id="events-section">
+                <h2>📅 Events APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Events Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/events/getEventsListing/</div>
+                    <div class="description">Retrieves a list of events with filtering options.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Get Events for Client</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/events/getEventsListingForClient/</div>
+                    <div class="description">Gets all events associated with a specific client.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Get Event Overview</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/events/getEventOverviewWindow/</div>
+                    <div class="description">Retrieves detailed overview information for a specific event.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Refresh Event Staff Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/events/refreshEventStaffListing/</div>
+                    <div class="description">Refreshes the staff listing for an event.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Get All Events JSON</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/events/getAllEventsJson/</div>
+                    <div class="description">Retrieves all events in JSON format for calendar views.</div>
+                </div>
+            </section>
+
+            <!-- Staff API Section -->
+            <section class="api-section" id="staff-section">
+                <h2>👥 Staff APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Staff Main Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/staff/getStaffMainListing/</div>
+                    <div class="description">Retrieves the main staff listing for staff management and selection.</div>
+                </div>
+            </section>
+
+            <!-- Clients API Section -->
+            <section class="api-section" id="clients-section">
+                <h2>👤 Clients APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Client Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/clients/getClientListing/</div>
+                    <div class="description">Retrieves a list of clients with search and filter capabilities.</div>
+                </div>
+            </section>
+
+            <!-- Email/Communication APIs -->
+            <section class="api-section" id="email-section">
+                <h2>📧 Email & Communication APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Send New Object Email</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/email/sendNewObjectEmail/</div>
+                    <div class="description">Sends a new email to leads, clients, or events.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Send Email Later</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/email/sendNewObjectEmailLater/</div>
+                    <div class="description">Schedules an email to be sent at a later time.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Get Email Send Form</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/email/getObjectEmailSendForm/</div>
+                    <div class="description">Retrieves the email composition form for sending emails.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Apply Email Template</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/data/applyEmailTemplateToObject/</div>
+                    <div class="description">Applies an email template to a lead, client, or event.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Get Communication Items</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/comm/getCommunicationItems/</div>
+                    <div class="description">Retrieves communication history and items for objects.</div>
+                </div>
+            </section>
+
+            <!-- Questionnaire APIs -->
+            <section class="api-section" id="questionnaire-section">
+                <h2>📋 Questionnaire APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Refresh Questionnaire Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/quest/refreshQuestionnaireToObjectListing/</div>
+                    <div class="description">Refreshes the questionnaire listing for leads, events, or clients.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Add Questionnaire Template</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/quest/addQuestionnaireTemplateToObject/</div>
+                    <div class="description">Adds a questionnaire template to an object (lead/event/client).</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Delete Questionnaire</h3>
+                    <span class="method GET">GET</span>
+                    <div class="url">/admin/fn/quest/deleteQuestionnaireFromObject/</div>
+                    <div class="description">Deletes a questionnaire from an object.</div>
+                    <div class="parameters">
+                        <h4>Parameters:</h4>
+                        <div class="parameter">
+                            <span class="param-name">clientID</span> <span class="param-type">(number)</span> - Client identifier
+                        </div>
+                        <div class="parameter">
+                            <span class="param-name">questionnaireID</span> <span class="param-type">(number)</span> - Questionnaire identifier
+                        </div>
+                        <div class="parameter">
+                            <span class="param-name">objType</span> <span class="param-type">(string)</span> - Object type (event/lead/client)
+                        </div>
+                        <div class="parameter">
+                            <span class="param-name">objID</span> <span class="param-type">(number)</span> - Object identifier
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Remove All Reminders</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/data/removeAllRemindersFromObject/</div>
+                    <div class="description">Removes all reminders from an object.</div>
+                </div>
+            </section>
+
+            <!-- Invoices API Section -->
+            <section class="api-section" id="invoices-section">
+                <h2>💰 Invoices APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Invoice Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/invoices/getInvoiceListing/</div>
+                    <div class="description">Retrieves a list of invoices with filtering and pagination.</div>
+                </div>
+            </section>
+
+            <!-- Miscellaneous APIs -->
+            <section class="api-section" id="misc-section">
+                <h2>🔧 Miscellaneous APIs</h2>
+
+                <div class="endpoint">
+                    <h3>Get Add Object Category Form</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/misc/getAddObjectCategoryForm/</div>
+                    <div class="description">Retrieves the form for adding categories to objects.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Associate Category to Item</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/misc/associateObjectCategoryToItem/</div>
+                    <div class="description">Associates a category with an object item.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Refresh Category Listing</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">/admin/fn/misc/refreshObjectCategoriesListing/</div>
+                    <div class="description">Refreshes the category listing after changes.</div>
+                </div>
+            </section>
+
+            <!-- External APIs -->
+            <section class="api-section external-api" id="external-section">
+                <h2>🌐 External APIs</h2>
+
+                <div class="endpoint">
+                    <h3>USPS City/State Lookup</h3>
+                    <span class="method GET">GET</span>
+                    <div class="url">https://apis.usps.com/addresses/v3/city-state</div>
+                    <div class="description">USPS API for validating and retrieving city/state information from ZIP codes.</div>
+                    <div class="parameters">
+                        <h4>Parameters:</h4>
+                        <div class="parameter">
+                            <span class="param-name">ZIPCode</span> <span class="param-type">(string)</span> - ZIP code to validate
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>USPS OAuth Token</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">https://apis.usps.com/oauth2/v3/token</div>
+                    <div class="description">Obtains OAuth access token for USPS API authentication.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Zippopotam.us</h3>
+                    <span class="method GET">GET</span>
+                    <div class="url">https://api.zippopotam.us/us/{zipcode}</div>
+                    <div class="description">Free ZIP code lookup service providing city and state information.</div>
+                    <div class="parameters">
+                        <h4>Parameters:</h4>
+                        <div class="parameter">
+                            <span class="param-name">zipcode</span> <span class="param-type">(string)</span> - 5-digit ZIP code
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Shop Wisely AI</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">https://shopwisely.ai/frame/product/api/insights</div>
+                    <div class="description">Product insights and analysis API for Amazon products.</div>
+                </div>
+
+                <div class="endpoint">
+                    <h3>Heymarket APIs</h3>
+                    <span class="method POST">POST</span>
+                    <div class="url">https://api-prod-client.heymarket.com/v2/</div>
+                    <div class="description">Heymarket SMS and communication platform APIs for bulk messaging.</div>
+                    <div class="parameters">
+                        <h4>Endpoints:</h4>
+                        <div class="parameter">/list/create - Create contact lists</div>
+                        <div class="parameter">/schedule/create - Schedule messages</div>
+                        <div class="parameter">/templates/fetch - Fetch message templates</div>
+                        <div class="parameter">/lists/fetch - Retrieve contact lists</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const apiSections = document.querySelectorAll('.api-section');
+        const endpoints = document.querySelectorAll('.endpoint');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+                // Show all sections and endpoints
+                apiSections.forEach(section => section.style.display = 'block');
+                endpoints.forEach(endpoint => endpoint.style.display = 'block');
+                return;
+            }
+
+            apiSections.forEach(section => {
+                const sectionEndpoints = section.querySelectorAll('.endpoint');
+                let sectionHasMatches = false;
+
+                sectionEndpoints.forEach(endpoint => {
+                    const text = endpoint.textContent.toLowerCase();
+                    const matches = text.includes(searchTerm);
+                    endpoint.style.display = matches ? 'block' : 'none';
+
+                    if (matches) {
+                        sectionHasMatches = true;
+                    }
+                });
+
+                section.style.display = sectionHasMatches ? 'block' : 'none';
+            });
+        });
+
+        // Add smooth scrolling for anchor links (if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

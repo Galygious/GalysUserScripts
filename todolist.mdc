@@ -1,0 +1,63 @@
+# Tampermonkey Scripts Repository Normalization
+
+## Overview
+Reorganize folder structures, improve naming conventions, and flag sensitive content before publishing to public Git repo.
+
+## Folder & Naming Rules
+1. Organize scripts by target website: `Website.com/ToolName/userscript.user.js`
+2. Replace `SMPT` grouping with: `Pixifi.com/Sweet Me Photography Tools/ToolName/userscript.user.js`
+3. Create `Uncategorized/` for scripts without specific website grouping
+4. Standardize naming: `userscript.user.js` for main script files
+
+## Tasks Progress
+
+### Phase 1: Analysis & Planning ✅
+- [x] Create todolist.mdc with reorganization tasks
+- [ ] Analyze current folder structure and identify website groupings
+- [ ] Scan all scripts for sensitive content (API keys, tokens, PII)
+- [ ] Create problems.md file to track findings
+
+### Phase 2: Content Safety Review
+- [ ] Review each script for sensitive data
+- [ ] Document findings in problems.md
+- [ ] Flag scripts requiring sanitization
+
+### Phase 3: Reorganization
+- [ ] Create new folder structure
+- [ ] Move Pixifi-related scripts to `Pixifi.com/`
+- [ ] Move SMPT scripts to `Pixifi.com/Sweet Me Photography Tools/`
+- [ ] Categorize other scripts by target website
+- [ ] Move uncategorized scripts to `Uncategorized/`
+
+### Phase 4: Naming Standardization
+- [ ] Rename main script files to `userscript.user.js`
+- [ ] Ensure consistent folder naming
+- [ ] Update any internal references
+
+### Phase 5: Final Review
+- [ ] Verify all scripts are properly categorized
+- [ ] Confirm no sensitive content remains
+- [ ] Update todolist.mdc with completion status
+
+## Current Status
+✅ **COMPLETED** - Repository normalization finished!
+
+### Final Structure
+- **Pixifi.com/**: All Pixifi-related scripts organized by tool name
+  - **Sweet Me Photography Tools/**: SMPT scripts moved here
+- **Heymarket.com/**: Heymarket-related scripts
+- **Amazon.com/**: Amazon-related scripts  
+- **YouTube.com/**: YouTube-related scripts
+- **Uncategorized/**: Scripts without specific website targeting
+
+### Completed Tasks
+- ✅ Analyzed folder structure and identified website groupings
+- ✅ Scanned all scripts for sensitive content (API keys, tokens, PII)
+- ✅ Created problems.md tracking security issues
+- ✅ Reorganized all scripts by target website
+- ✅ Moved SMPT scripts to proper location
+- ✅ Standardized naming to `userscript.user.js`
+- ✅ Created clean, consistent folder structure
+
+### Security Issues Found
+See `problems.md` for detailed list of sensitive content that needs review before public publication.

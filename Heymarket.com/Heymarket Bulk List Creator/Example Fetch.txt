@@ -1,0 +1,58 @@
+fetch("https://api-prod-client.heymarket.com/v2/list/create", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9",
+    "cache-control": "no-cache",
+    "content-type": "application/json;charset=UTF-8",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "x-emb-security-token": "E_cPzdbYVWfT7yB9KZVJeTtvRdGmcQQdxxIxFDIHsAA="
+  },
+  "referrer": "https://app.heymarket.com/lists/new/",
+  "body": "{\"title\":\"Booking Resends - 09/2/2025 - 08/30-08/31\",\"local_id\":\"d530bfd2-88a6-4653-b1de-40246f67f920\",\"members\":{\"12672494638\":{},\"13472636714\":{},\"16469209359\":{},\"14842698225\":{},\"19177487294\":{},\"12408766994\":{},\"17578134177\":{},\"17189091112\":{},\"19739810122\":{},\"16265330422\":{},\"12027630141\":{},\"15084930187\":{},\"16462484892\":{},\"12677485705\":{},\"17192431972\":{},\"12676014289\":{},\"14013916239\":{},\"12019201985\":{},\"16466290160\":{},\"18628660417\":{},\"16097248274\":{},\"13042794496\":{},\"18045735712\":{},\"19733496388\":{},\"19148042357\":{},\"14846034089\":{},\"13476925466\":{},\"12672364342\":{},\"16109695040\":{},\"18053938981\":{},\"16094052995\":{},\"14102452087\":{},\"17039923044\":{},\"19295900002\":{},\"13478603676\":{},\"17178697823\":{},\"12152402717\":{},\"13013786403\":{},\"15166434753\":{},\"12026389341\":{\"f\":\"Bilisa\",\"l\":\"156409BILISA011224DC\"},\"19175732747\":{},\"13028678164\":{},\"12678180498\":{},\"17187643787\":{},\"12017795270\":{},\"16462076126\":{},\"12082970014\":{},\"13013517671\":{},\"19176232434\":{}},\"tags\":[{\"tag_id\":196925}],\"team_id\":64149}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "omit"
+});
+
+
+in this example we have several variables.
+
+first the name which is a combination thing.
+\"title\":\"Booking Resends - 09/2/2025 - 08/30-08/31\"
+
+
+so the field for the fetch is title and the content is "Booking Resends - 09/2/2025 - 08/30-08/31"
+
+thats "{brand} Resends - {todays date} - {startdate of resend data}-{enddate of resend data}"
+
+then we have local_id
+i genuinely have zero idea where local_id is coming from ill need help investigating where that is sourced cause the only place i see the id in a couple of places in a har.
+
+59810
+```
+,
+          {
+            "type": "receive",
+            "time": 1756838826.338112,
+            "opcode": 1,
+            "data": "{\"type\":\"list\",\"data\":{\"id\":1345134,\"op\":\"a\",\"name\":\"Test\",\"targets\":{\"11234567890\":{}},\"tags\":[{\"id\":733655,\"team_id\":64149,\"tag_id\":196925,\"created\":\"2025-09-02T18:47:05.427790829Z\"}],\"local_id\":\"06cb128f-a6fc-4320-a783-09f268d70dac\",\"team_id\":64149,\"creator_id\":144139,\"type\":\"legacy\",\"shared\":true,\"created\":\"2025-09-02T18:47:05.424958454Z\",\"updated\":\"2025-09-02T18:47:05.424958454Z\",\"rev\":1},\"uuid\":\"db85fdf6-5f05-489c-8e28-0b5f9a2bc51f\"}\n"
+          }
+```
+130295
+131442
+
+har is in the workspace.
+
+
+after id is members which seem to be id's assigned to the phone numbers i entered???
+tags is just the tag i chose should always be 196925
+and team id is our team id for heymarket should always be the same. 64149
+
+so we've got some investigating to do as far as figuring out the members and where that local_id comes from.

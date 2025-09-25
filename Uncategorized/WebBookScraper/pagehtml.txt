@@ -1,0 +1,54 @@
+<!--?xml version="1.0" encoding="UTF-8"?--><!DOCTYPE html><html xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>Network Security, Firewalls, and VPNs</title>
+<link rel="stylesheet" type="text/css" title="Network Security, Firewalls, and VPNs" href="../css/default.css" />
+</head>
+<body epub:type="bodymatter"><div id="opr-reflow-scrolling-container" class="opr-reflow-scrolling-container"><section id="ch1" epub:type="chapter" role="doc-chapter" class="level1">
+<span aria-label="3" epub:type="pagebreak" role="doc-pagebreak" id="page_3" title="3"><span class="op-pagenav-block"><span class="op-pagenav-wraper"><span class="op-pagenav-span"><span class="op-pagenav-span-box" data="3"></span></span></span></span></span>
+<figure>
+<img src="../images/Chapter-Opener.jpg" alt="" role="presentation" />
+<figcaption>
+<p class="title">© Digital_Art/Shutterstock</p>
+</figcaption>
+</figure>
+<header>
+<table class="chtable">
+<tbody><tr>
+<td><h2 class="ch-title" epub:type="title">Fundamentals of Network Security</h2></td>
+<td><h2 class="ch-no" epub:type="title">CHAPTER <br /><span class="no">1</span></h2></td>
+</tr>
+</tbody></table>
+</header>
+<p class="noindent"><span class="dropcap">C</span>OMPUTER NETWORK SECURITY is very complex. New threats from inside and outside networks appear constantly. In response, the security community is constantly developing new products and procedures to defend against threats of the past and unknown threats of the future.</p>
+<p class="indent">As companies merge, people lose their jobs, new equipment comes online, and <a id="gloss68" href="30_glossary.xhtml#gloss68"><span class="key_col">business tasks</span></a> change, people do not always do what you expect. Network security configurations that worked well yesterday might not work quite as well tomorrow. In an ever-changing business climate, whom should you trust? Has your trust been violated? How would you even know? Who is attempting to harm your network this time? And why?</p>
+<p class="indent">Because of these complex issues, you need to understand the essentials of network security. This chapter will introduce you to the basic elements of network security. Once you have a firm grasp of these fundamentals, you will be well equipped to put effective security measures into practice on your organization’s network.</p>
+<div class="sidebar-padding">
+<header>
+<h3 class="subheadbox" epub:type="title"><span aria-label="4" epub:type="pagebreak" role="doc-pagebreak" id="page_4" title="4"><span class="op-pagenav-block"><span class="op-pagenav-wraper"><span class="op-pagenav-span"><span class="op-pagenav-span-box" data="4"></span></span></span></span></span>Chapter 1 Topics</h3>
+</header>
+<p class="learn">This chapter covers the following topics and concepts:</p>
+<ul class="bullet">
+<li>What is meant by network security</li>
+<li>The items protected within the seven domains of a typical IT infrastructure</li>
+<li>The goals of network security</li>
+<li>How to assess the success of a network security implementation</li>
+<li>Why written network security policies are important</li>
+<li>Who is responsible for network security</li>
+<li>Controls to enhance wired and wireless local area network (LAN) infrastructure security</li>
+<li>Examples of internal and external network issues</li>
+<li>The common network security components used to mitigate threats throughout the IT infrastructure</li>
+<li>The basics of Transmission Control Protocol/Internet Protocol (TCP/IP)</li>
+</ul>
+<header>
+<h3 class="subheadbox" epub:type="title">Chapter 1 Goals</h3>
+</header>
+<p class="learn">When you complete this chapter, you will be able to:</p>
+<ul class="bullet">
+<li>Describe the key concepts and terms associated with network security</li>
+<li>Describe the importance of a written security policy; explain how policies help minimize risk exposure and threats to a network infrastructure</li>
+<li>Define network security roles and responsibilities; identify who within an IT organization is accountable for these security implementations</li>
+<li>Identify examples of network security concerns or threats that require enhanced security countermeasures to properly minimize risk exposure and threats</li>
+<li>Describe the security requirements needed for wired versus wireless LAN infrastructures in order to provide an enhanced level of security</li>
+<li>Compare and contrast common network security components and devices, and their use throughout the IT infrastructure</li>
+</ul>
+</div>
+</section><div id="rangyHighlighter"></div><div id="opSpacer"></div></div></body></html>

@@ -1,0 +1,1255 @@
+
+So it already has the event id's here's what needs to happen.
+
+``` Add photographer questionaire fetch example.
+fetch("https://www.pixifi.com/admin/fn/quest/addQuestionnaireTemplateToObject/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/1144239/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&templateID=88890&objType=event&objID=1144239&brandID=11634&customerID=&sendEmail=0&responseID=&recipients=&responseSubject=&responseMsg=&responseType=questionnaire",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+
+
+And response
+```
+SUCCESS{|}1084079
+```
+
+with that number being the questionaire number.
+
+rrefresh questionaire fetch.
+```
+fetch("https://www.pixifi.com/admin/fn/quest/refreshQuestionnaireToObjectListing/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/1144239/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&objectType=event&objectID=1144239",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+and response
+
+```
+SUCCESS{|}	<div id="questionnaire_1079878" class="normalThinRowStyle gridRow" >
+		<div class="floatGrid"  style="width: 250px; cursor: pointer;" onclick="loadQuestionnaire('1079878','event','1144239','','');">
+			RESERVE SESSION		</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1079878','event','1144239','','');">05/04/2025</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1079878','event','1144239','','');"><span class="fa fa-check font-green-jungle"></span> 05/04/2025</div>
+
+
+
+
+		<div class="btn-group pull-right">
+			<button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+				<i class="icon-more-circle actionsIcon" style="font-size: 20px!important;"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="https://questionnaires.pixifi.com/2826260526cc2602/" target="_blank"  ><span class="icon-navigation-1"></span> Launch External </a>
+				</li>
+								<li>
+					<a href="https://questionnaire.io/2826260526cc2602/export/" target="_blank"  ><span class="fa fa-file-pdf-o"></span> Print .Pdf </a>
+				</li>
+														<li>
+							<a href="javascript:void(0);"  onclick="createTemplateFromQuestionnaire('1079878');" title="Create Template from Questionnaire">
+								<span class="icon-file-copy"></span> Create Template
+							</a>
+						</li>
+										<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaire('1079878');" title="Send Questionnaire Email Reminder">
+						<span class="icon-email-send"></span> Send via Email
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaireSMS('1079878');" title="Send Questionnaire SMS/Text Reminder">
+						<span class="icon-phone-message-3"></span> Send via SMS/Text
+					</a>
+				</li>
+												<li>
+					<a href="javascript:void(0);" onclick="toggleQuestionnairePortalVisibility('1079878');" title="Click to make it Hidden">
+						<span class="fa fa-eye font-green-jungle"></span> Visible in Portal					</a>
+				</li>
+								<li>
+					<a href="javascript:void(0);"  onclick="toggleQuestionnaireLockedStatus('1079878');" title="Click to Lock it">
+						<span class="icon-unlocked"></span> Un-Locked Answers					</a>
+				</li>
+
+								<li class="divider"></li>
+				<li>
+					<a href="javascript:void(0);" onclick="deleteQuestionnaire('1079878');" class=" font-red-flamingo"> Delete Questionnaire</a>
+				</li>
+							</ul>
+		</div>
+
+
+
+
+
+		<br style="clear: both;" />
+
+		
+
+	</div>
+		<div id="questionnaire_1083468" class="alternateThinRowStyleLight gridRow" >
+		<div class="floatGrid"  style="width: 250px; cursor: pointer;" onclick="loadQuestionnaire('1083468','event','1144239','','');">
+			PHOTOGRAPHER SESSION INFO QUESTIONNAIRE		</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1083468','event','1144239','','');">05/16/2025</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1083468','event','1144239','','');"><span class="fa fa-check font-green-jungle"></span> 05/16/2025</div>
+
+
+
+
+		<div class="btn-group pull-right">
+			<button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+				<i class="icon-more-circle actionsIcon" style="font-size: 20px!important;"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="https://questionnaires.pixifi.com/fd42ef35f8373e50/" target="_blank"  ><span class="icon-navigation-1"></span> Launch External </a>
+				</li>
+								<li>
+					<a href="https://questionnaire.io/fd42ef35f8373e50/export/" target="_blank"  ><span class="fa fa-file-pdf-o"></span> Print .Pdf </a>
+				</li>
+														<li>
+							<a href="javascript:void(0);"  onclick="createTemplateFromQuestionnaire('1083468');" title="Create Template from Questionnaire">
+								<span class="icon-file-copy"></span> Create Template
+							</a>
+						</li>
+										<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaire('1083468');" title="Send Questionnaire Email Reminder">
+						<span class="icon-email-send"></span> Send via Email
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaireSMS('1083468');" title="Send Questionnaire SMS/Text Reminder">
+						<span class="icon-phone-message-3"></span> Send via SMS/Text
+					</a>
+				</li>
+												<li>
+					<a href="javascript:void(0);" onclick="toggleQuestionnairePortalVisibility('1083468');" title="Click to make it Hidden">
+						<span class="fa fa-eye font-green-jungle"></span> Visible in Portal					</a>
+				</li>
+								<li>
+					<a href="javascript:void(0);"  onclick="toggleQuestionnaireLockedStatus('1083468');" title="Click to Lock it">
+						<span class="icon-unlocked"></span> Un-Locked Answers					</a>
+				</li>
+
+								<li class="divider"></li>
+				<li>
+					<a href="javascript:void(0);" onclick="deleteQuestionnaire('1083468');" class=" font-red-flamingo"> Delete Questionnaire</a>
+				</li>
+							</ul>
+		</div>
+
+
+
+
+
+		<br style="clear: both;" />
+
+		
+
+	</div>
+		<div id="questionnaire_1084079" class="normalThinRowStyle gridRow" >
+		<div class="floatGrid"  style="width: 250px; cursor: pointer;" onclick="loadQuestionnaire('1084079','event','1144239','','');">
+			PHOTOGRAPHER SESSION INFO QUESTIONNAIRE		</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1084079','event','1144239','','');">05/18/2025</div>
+		<div class="floatGrid" style="width: 125px;" onclick="loadQuestionnaire('1084079','event','1144239','','');">&nbsp;</div>
+
+
+
+
+		<div class="btn-group pull-right">
+			<button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+				<i class="icon-more-circle actionsIcon" style="font-size: 20px!important;"></i>
+			</button>
+			<ul class="dropdown-menu pull-right" role="menu">
+				<li>
+					<a href="https://questionnaires.pixifi.com/a8e4686f2b6625d8/" target="_blank"  ><span class="icon-navigation-1"></span> Launch External </a>
+				</li>
+								<li>
+					<a href="https://questionnaire.io/a8e4686f2b6625d8/export/" target="_blank"  ><span class="fa fa-file-pdf-o"></span> Print .Pdf </a>
+				</li>
+														<li>
+							<a href="javascript:void(0);"  onclick="createTemplateFromQuestionnaire('1084079');" title="Create Template from Questionnaire">
+								<span class="icon-file-copy"></span> Create Template
+							</a>
+						</li>
+										<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaire('1084079');" title="Send Questionnaire Email Reminder">
+						<span class="icon-email-send"></span> Send via Email
+					</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);"  onclick="sendReminderForQuestionnaireSMS('1084079');" title="Send Questionnaire SMS/Text Reminder">
+						<span class="icon-phone-message-3"></span> Send via SMS/Text
+					</a>
+				</li>
+												<li>
+					<a href="javascript:void(0);" onclick="toggleQuestionnairePortalVisibility('1084079');" title="Click to make it Hidden">
+						<span class="fa fa-eye font-green-jungle"></span> Visible in Portal					</a>
+				</li>
+								<li>
+					<a href="javascript:void(0);"  onclick="toggleQuestionnaireLockedStatus('1084079');" title="Click to Lock it">
+						<span class="icon-unlocked"></span> Un-Locked Answers					</a>
+				</li>
+
+								<li class="divider"></li>
+				<li>
+					<a href="javascript:void(0);" onclick="deleteQuestionnaire('1084079');" class=" font-red-flamingo"> Delete Questionnaire</a>
+				</li>
+							</ul>
+		</div>
+
+
+
+
+
+		<br style="clear: both;" />
+
+		
+
+	</div>
+	
+```
+
+as you can see there are 3 questionaires here. 2 which are PHOTOGRAPHER SESSION INFO QUESTIONNAIRE which is actually an error but its just like that for testing.
+
+example email source
+```
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Hi Diana,</span></p>
+<p><span style="font-size: 12pt; font-family: helvetica, arial, sans-serif;">Please click the dark blue link below titled "PHOTOGRAPHER SESSION INFO QUESTIONNAIRE" to complete your final task for SESSION ID: $ 207596PITTMAN051625DC photographed Friday, May 16th, 2025. </span></p>
+<p><strong><span style="font-size: 12pt; font-family: helvetica, arial, sans-serif;">Please complete before midnight on the day of the session.</span></strong></p>
+<p><span style="font-size: 12pt; font-family: helvetica, arial, sans-serif;"><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000;">REMINDER:&nbsp; If the client ID has "PC" in front of it this indicates it is a Previous Client who has used us before. please do NOT include the PC in the file name when uploading.</span></span></p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td align="center">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; padding: 15px 25px;" align="center" bgcolor="#33cccc"><center><span style="font-family: helvetica, arial, sans-serif; font-size: 14pt;"><strong><span style="color: #ffffff;"><a class="emailLink" style="color: #ffffff;" href="https://questionnaires.pixifi.com/2826260526cc2602/" target="_blank" rel="noopener">RESERVE SESSION - <strong>completed</strong></a><br /><a class="emailLink" href="https://questionnaires.pixifi.com/fd42ef35f8373e50/" target="_blank" rel="noopener">PHOTOGRAPHER SESSION INFO QUESTIONNAIRE - <strong>completed</strong></a><br /><a class="emailLink" href="https://questionnaires.pixifi.com/a8e4686f2b6625d8/" target="_blank" rel="noopener">PHOTOGRAPHER SESSION INFO QUESTIONNAIRE</a><br /></span></strong></span></center></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Thank you!</span></p>
+<p><span style="font-family: helvetica, arial, sans-serif; font-size: 12pt;">Sweet Me Photography</span></p>
+<p>&nbsp;</p>
+```
+
+and fetch on email sent.
+````
+fetch("https://www.pixifi.com/admin/fn/email/sendNewObjectEmail/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/1144239/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "emailin_event=ev.950b6db90ccb16f0%40contactmystudio.com&brandID=11634&recipientObj_event=shawn%40sweetmephotography.com&cc_event=&bcc_event=&responses=251825&subject_event=QUESTIONNAIRE+FOR+SESSION+%24+207596PITTMAN051625DC+ON+Friday%2C+May+16th%2C+2025&message_event=%3Cp%3E%3Cspan+style%3D%22font-family%3A+helvetica%2C+arial%2C+sans-serif%3B+font-size%3A+12pt%3B%22%3EHi+Diana%2C%3C%2Fspan%3E%3C%2Fp%3E%0D%0A%3Cp%3E%3Cspan+style%3D%22font-size%3A+12pt%3B+font-family%3A+helvetica%2C+arial%2C+sans-serif%3B%22%3EPlease+click+the+dark+blue+link+below+titled+%22PHOTOGRAPHER+SESSION+INFO+QUESTIONNAIRE%22+to+complete+your+final+task+for+SESSION+ID%3A+%24+207596PITTMAN051625DC+photographed+Friday%2C+May+16th%2C+2025.+%3C%2Fspan%3E%3C%2Fp%3E%0D%0A%3Cp%3E%3Cstrong%3E%3Cspan+style%3D%22font-size%3A+12pt%3B+font-family%3A+helvetica%2C+arial%2C+sans-serif%3B%22%3EPlease+complete+before+midnight+on+the+day+of+the+session.%3C%2Fspan%3E%3C%2Fstrong%3E%3C%2Fp%3E%0D%0A%3Cp%3E%3Cspan+style%3D%22font-size%3A+12pt%3B+font-family%3A+helvetica%2C+arial%2C+sans-serif%3B%22%3E%3Cspan+style%3D%22font-family%3A+arial%2C+helvetica%2C+sans-serif%3B+font-size%3A+12pt%3B+color%3A+%23000000%3B%22%3EREMINDER%3A%26nbsp%3B+If+the+client+ID+has+%22PC%22+in+front+of+it+this+indicates+it+is+a+Previous+Client+who+has+used+us+before.+please+do+NOT+include+the+PC+in+the+file+name+when+uploading.%3C%2Fspan%3E%3C%2Fspan%3E%3C%2Fp%3E%0D%0A%3Ctable+border%3D%220%22+width%3D%22100%25%22+cellspacing%3D%220%22+cellpadding%3D%220%22%3E%0D%0A%3Ctbody%3E%0D%0A%3Ctr%3E%0D%0A%3Ctd+align%3D%22center%22%3E%0D%0A%3Ctable+border%3D%220%22+cellspacing%3D%220%22+cellpadding%3D%220%22%3E%0D%0A%3Ctbody%3E%0D%0A%3Ctr%3E%0D%0A%3Ctd+style%3D%22-webkit-border-radius%3A+3px%3B+-moz-border-radius%3A+3px%3B+border-radius%3A+3px%3B+padding%3A+15px+25px%3B%22+align%3D%22center%22+bgcolor%3D%22%2333cccc%22%3E%3Ccenter%3E%3Cspan+style%3D%22font-family%3A+helvetica%2C+arial%2C+sans-serif%3B+font-size%3A+14pt%3B%22%3E%3Cstrong%3E%3Cspan+style%3D%22color%3A+%23ffffff%3B%22%3E%3Ca+class%3D%22emailLink%22+style%3D%22color%3A+%23ffffff%3B%22+href%3D%22https%3A%2F%2Fquestionnaires.pixifi.com%2F2826260526cc2602%2F%22+target%3D%22_blank%22+rel%3D%22noopener%22%3ERESERVE+SESSION+-+%3Cstrong%3Ecompleted%3C%2Fstrong%3E%3C%2Fa%3E%3Cbr+%2F%3E%3Ca+class%3D%22emailLink%22+href%3D%22https%3A%2F%2Fquestionnaires.pixifi.com%2Ffd42ef35f8373e50%2F%22+target%3D%22_blank%22+rel%3D%22noopener%22%3EPHOTOGRAPHER+SESSION+INFO+QUESTIONNAIRE+-+%3Cstrong%3Ecompleted%3C%2Fstrong%3E%3C%2Fa%3E%3Cbr+%2F%3E%3Ca+class%3D%22emailLink%22+href%3D%22https%3A%2F%2Fquestionnaires.pixifi.com%2Fa8e4686f2b6625d8%2F%22+target%3D%22_blank%22+rel%3D%22noopener%22%3EPHOTOGRAPHER+SESSION+INFO+QUESTIONNAIRE%3C%2Fa%3E%3Cbr+%2F%3E%3C%2Fspan%3E%3C%2Fstrong%3E%3C%2Fspan%3E%3C%2Fcenter%3E%3C%2Ftd%3E%0D%0A%3C%2Ftr%3E%0D%0A%3C%2Ftbody%3E%0D%0A%3C%2Ftable%3E%0D%0A%3C%2Ftd%3E%0D%0A%3C%2Ftr%3E%0D%0A%3C%2Ftbody%3E%0D%0A%3C%2Ftable%3E%0D%0A%3Cp%3E%3Cspan+style%3D%22font-family%3A+helvetica%2C+arial%2C+sans-serif%3B+font-size%3A+12pt%3B%22%3EThank+you!%3C%2Fspan%3E%3C%2Fp%3E%0D%0A%3Cp%3E%3Cspan+style%3D%22font-family%3A+helvetica%2C+arial%2C+sans-serif%3B+font-size%3A+12pt%3B%22%3ESweet+Me+Photography%3C%2Fspan%3E%3C%2Fp%3E%0D%0A%3Cp%3E%26nbsp%3B%3C%2Fp%3E&clientID=12295&objectType=event&objectID=1144239",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+
+
+email was sent to my test email shawn@sweetmephotography.com
+
+
+and finally to get the email we need to send it to we do
+
+```
+fetch("https://www.pixifi.com/admin/fn/email/getObjectEmailSendForm/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/1144239/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&objectType=event&objectID=1144239",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+
+and pull the email from
+
+```
+SUCCESS{|}		<form method="POST" id="emailFormNew" enctype="multipart/form-data" >
+			<!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+			<div id="emailFormNewNew" class="modalBorderBox" style="width:900px; margin: 0px;">
+
+				<input type="hidden" id="emailin_event" name="emailin_event" size="" class="" maxlength="" value="ev.950b6db90ccb16f0@contactmystudio.com"   />				<div class="modalHeader">
+					<div class="leftTitle headerTitle"><i class="icon-envelope-letter"></i> Send an E-mail:
+
+						<a href="javascript:void(0);" class="pull-right maximizeBtn" style="" title="Maximize Window"><span class="icon-expand-2"></span></a>
+
+					</div>
+					<div class="rightTitle">
+						<div style="float: left;" >
+							<button type="button" id="sendEmailBtnTop" class="btn btn-default btn-xs" onclick="sendNewObjectEmail('event','1144239');">
+								<i class="icon-email-send" id="sendEmailIconTop" ></i>
+								<span id="sendEmailTextTop">Send E-mail</span>
+							</button>
+						</div>
+
+						<a href="javascript:void(0);" class="pull-right" style="margin-left: 10px;" onclick="closeObjectEmailWindow();"><span class="icon-cancel"></span></a>
+						<a href="javascript:void(0);" class="pull-right minimizeBtn" style="margin-left: 30px;" title="Minimize Window"><span class="icon-contract-2"></span></a>
+
+					</div>
+
+				</div>
+				<style type="text/css">
+					.selectize-dropdown, .selectize-dropdown.form-control {  z-index: 905000; }
+					.selectize-dropdown-content .label { color: #000 !important; }
+				</style>
+				<script type="text/javascript">
+					$(function() {
+						//updated on [03.20.2k19] : TH
+
+						$('#recipientObj_event').selectize({
+							persist: false,
+							maxItems: null,
+							plugins: ['remove_button','drag_drop'],
+							valueField: 'email',
+							labelField: 'name',
+							searchField: ['name', 'email'],
+							options: [
+									{email: "tiffani.d.pittman@gmail.com", name: "Tiffani Pittman - tiffani.d.pittman@gmail.com"},{email: "rachel@sweetmephotography.com", name: "<i class='icon-ID-card'></i> 1 Rachel Wood (staff)"},{email: "smp-orders@ortussolutions.com", name: "<i class='icon-ID-card'></i> 9 Ortus Jose (staff)"},{email: "dianams.2@gmail.com", name: "<i class='icon-ID-card'></i> DC Diana Cram (FC) (staff)"}							],
+							render: {
+								item: function(item, escape) {
+									return '<div>' +
+										(item.email ? ' <span class="email"><span class="fa fa-envelope-o"></span> ' + item.email + '</span>' : '') +
+										'</div>';
+								},
+								option: function(item, escape) {
+									var label = item.name || item.email;
+									var caption = item.name ? item.email : null;
+									return "<div>" +
+										"<span class=\"label\">" + label + "</span>" +
+										(caption ? "<span class=\"caption\">" + caption + "</span>" : "") +
+										"</div>";
+								}
+							},
+							createFilter: function(input) {
+								var match, regex;
+
+								// email@address.com
+								regex = new RegExp('^' + REGEX_EMAIL + '$', 'i');
+								match = input.match(regex);
+								if (match) return !this.options.hasOwnProperty(match[0]);
+
+								// name <email@address.com>
+								regex = new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i');
+								match = input.match(regex);
+								if (match) return !this.options.hasOwnProperty(match[2]);
+
+								return false;
+							},
+							create: function(input) {
+								if ((new RegExp('^' + REGEX_EMAIL + '$', 'i')).test(input)) {
+									return {email: input};
+								}
+								var match = input.match(new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i'));
+								if (match) {
+									return {
+										email : match[2],
+										name  : $.trim(match[1])
+									};
+								}
+								swal({
+									type: 'error',
+									title: 'Error',
+									html: 'Invalid email address'
+								});
+								return false;
+							}
+						});
+
+
+						elementReady('#cc_event').then((obj)=>{
+							$('#cc_event').selectize({
+								persist: false,
+								maxItems: null,
+								plugins: ['remove_button','drag_drop'],
+								valueField: 'email',
+								labelField: 'name',
+								searchField: ['name', 'email'],
+								options: [
+										{email: "tiffani.d.pittman@gmail.com", name: "Tiffani Pittman - tiffani.d.pittman@gmail.com"},{email: "rachel@sweetmephotography.com", name: "<i class='icon-ID-card'></i> 1 Rachel Wood (staff)"},{email: "smp-orders@ortussolutions.com", name: "<i class='icon-ID-card'></i> 9 Ortus Jose (staff)"},{email: "dianams.2@gmail.com", name: "<i class='icon-ID-card'></i> DC Diana Cram (FC) (staff)"}								],
+								render: {
+									item: function(item, escape) {
+										return '<div>' +
+											(item.email ? ' <span class="email"><span class="fa fa-envelope-o"></span> ' + item.email + '</span>' : '') +
+											'</div>';
+									},
+									option: function(item, escape) {
+										var label = item.name || item.email;
+										var caption = item.name ? item.email : null;
+										return "<div>" +
+											"<span class=\"label\">" + label + "</span>" +
+											(caption ? "<span class=\"caption\">" + caption + "</span>" : "") +
+											"</div>";
+									}
+								},
+								createFilter: function(input) {
+									var match, regex;
+
+									// email@address.com
+									regex = new RegExp('^' + REGEX_EMAIL + '$', 'i');
+									match = input.match(regex);
+									if (match) return !this.options.hasOwnProperty(match[0]);
+
+									// name <email@address.com>
+									regex = new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i');
+									match = input.match(regex);
+									if (match) return !this.options.hasOwnProperty(match[2]);
+
+									return false;
+								},
+								create: function(input) {
+									if ((new RegExp('^' + REGEX_EMAIL + '$', 'i')).test(input)) {
+										return {email: input};
+									}
+									var match = input.match(new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i'));
+									if (match) {
+										return {
+											email : match[2],
+											name  : $.trim(match[1])
+										};
+									}
+									swal({
+										type: 'error',
+										title: 'Error',
+										html: 'Invalid email address'
+									});
+									return false;
+								}
+							});
+						});
+
+						elementReady('#bcc_event').then((obj)=>{
+							$('#bcc_event').selectize({
+								persist: false,
+								maxItems: null,
+								plugins: ['remove_button','drag_drop'],
+								valueField: 'email',
+								labelField: 'name',
+								searchField: ['name', 'email'],
+								options: [
+										{email: "tiffani.d.pittman@gmail.com", name: "Tiffani Pittman - tiffani.d.pittman@gmail.com"},{email: "rachel@sweetmephotography.com", name: "<i class='icon-ID-card'></i> 1 Rachel Wood (staff)"},{email: "smp-orders@ortussolutions.com", name: "<i class='icon-ID-card'></i> 9 Ortus Jose (staff)"},{email: "dianams.2@gmail.com", name: "<i class='icon-ID-card'></i> DC Diana Cram (FC) (staff)"}								],
+								render: {
+									item: function(item, escape) {
+										return '<div>' +
+											(item.email ? ' <span class="email"><span class="fa fa-envelope-o"></span> ' + item.email + '</span>' : '') +
+											'</div>';
+									},
+									option: function(item, escape) {
+										var label = item.name || item.email;
+										var caption = item.name ? item.email : null;
+										return "<div>" +
+											"<span class=\"label\">" + label + "</span>" +
+											(caption ? "<span class=\"caption\">" + caption + "</span>" : "") +
+											"</div>";
+									}
+								},
+								createFilter: function(input) {
+									var match, regex;
+
+									// email@address.com
+									regex = new RegExp('^' + REGEX_EMAIL + '$', 'i');
+									match = input.match(regex);
+									if (match) return !this.options.hasOwnProperty(match[0]);
+
+									// name <email@address.com>
+									regex = new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i');
+									match = input.match(regex);
+									if (match) return !this.options.hasOwnProperty(match[2]);
+
+									return false;
+								},
+								create: function(input) {
+									if ((new RegExp('^' + REGEX_EMAIL + '$', 'i')).test(input)) {
+										return {email: input};
+									}
+									var match = input.match(new RegExp('^([^<]*)\<' + REGEX_EMAIL + '\>$', 'i'));
+									if (match) {
+										return {
+											email : match[2],
+											name  : $.trim(match[1])
+										};
+									}
+									swal({
+										type: 'error',
+										title: 'Error',
+										html: 'Invalid email address'
+									});
+									return false;
+								}
+							});
+						});
+					});
+				</script>
+				
+
+
+				
+				<div class="messageComposer" >
+											<div class="form-group">
+							<div class="control-label col-xs-2 col-sm-2 col-md-2 col-lg-2">From: </div>
+							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">    <select id="brandID" name="brandID" style="width: 585px;"  class="styled">
+    	<option value="" > -- </option>
+<option value="11473"   >BOOKING - booking@sweetmephotography.com</option>
+<option value="11634" selected="selected"  >(EDITING) EAST/CENTRAL SMP  - support@sweetmephotography.com</option>
+<option value="14652"   >Sweet Me Models - models@sweetmephotography.com</option>
+<option value="15121"   >XXX DEFUNCT BRAND NAME XXX - booking@sweetmephotography.com</option>
+<option value="15793"   >SESSIONS - sessions@sweetmephotography.com</option>
+<option value="17159"   >(EDITING) WEST SMP - support@sweetmephotography.com</option>
+<option value="17187"   >ONBOARDING SMP - hr@sweetmephotography.com</option>
+<option value="17956"   >SMP JOBS - jobs@sweetmephotography.com</option>
+<option value="17999"   >Sweet Me Gift Cards - booking@sweetmephotography.com</option>
+<option value="18626"   >Sweet Me Staff Vacation Calendar - melissa@sweetmephotography.com</option>
+<option value="18826"   >SCHEDULE - schedule@sweetmephotography.com</option>
+<option value="19647"   >RESERVE - reserve@sweetmephotography.com</option>
+<option value="19691"   >MELISSA TEST BRAND - DO NOT USE - booking@sweetmephotography.com</option>
+<option value="21064"   >PC -SMP - clients@sweetmephotography.com</option>
+    </select>
+    </div>
+							<br style="clear: both;" />
+						</div>
+										<div class="form-group">
+						<div class="control-label col-xs-2 col-sm-2 col-md-2 col-lg-2">To:														<a href="javascript:void(0);" class="helpTip" data-titlebar="true" data-style="qtip-tipsy" data-tooltip="&lt;h2&gt;To/Recipient Field:&lt;/h2&gt;&lt;br /&gt;You can choose from one of the values provided, or type an e-mail address ended by a comma. 
+																					If the e-mail address you type in doesn&#039;t have the blue bubble around it, it won&#039;t send to them, so just type a comma after the address.
+																					&lt;br /&gt;
+																					&lt;img src=&#039;https://i.gyazo.com/a90ab26d2cbb09c1f827dcc48b7a1a8c.png&#039; /&gt;
+																					&lt;br /&gt;" ><i class="fa fa-question-circle"></i></a>
+						</div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+
+							<span style="float: left;">
+								<input type="text" id="recipientObj_event" name="recipientObj_event" size="580" class="form-control" maxlength="" value=""  style="width: 580px;"   />							</span>
+							<span style="float: left; margin-left: 10px;">
+								<button type="button" class="btn blue btn-sm" onclick="showCC('event');" title="Add Cc: recipient" >Cc:</button>
+								<button type="button" class="btn blue btn-sm" onclick="showBCC('event');" title="Add Bcc: recipient" >Bcc:</button>
+							</span><br style="clear: both;" />
+							<div id="CCDiv_event" class="hidden" >
+								<div class="leftTitle" style="width: 50px;">Cc: </div>
+								<div class="leftTitle"><input type="text" id="cc_event" name="cc_event" size="45" class="form-control" maxlength="" value=""  style="width: 450px;"   /></div><br style="clear: both;" />
+							</div>
+							<div id="BCCDiv_event" class="hidden" >
+								<div class="leftTitle" style="width: 50px;">Bcc: </div>
+								<div class="leftTitle"><input type="text" id="bcc_event" name="bcc_event" size="45" class="form-control" maxlength="" value=""  style="width: 450px;"   /></div><br style="clear: both;" />
+							</div>
+							<br style="clear: both;" />
+						</div>
+					</div>
+
+
+
+											<div class="form-group">
+							<div class="control-label col-xs-2 col-sm-2 col-md-2 col-lg-2">E-mail Templates:</div>
+							<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">    <select id="responses" name="responses" style="width: 580px;"  onchange="applyEmailTemplateToObject(this.value, 'event', '1144239');"  class="styled">
+    	<option value="" > -- </option>
+    				<optgroup label="SAT3">
+    				<option value="305149"  >*SAT3 Session BOOKING CONFIRMATION (Newborn)</option>
+    				</optgroup>
+    				    				<optgroup label="AUS Video">
+    				<option value="291632"  >***AUS25Video TRAINING BOOKING CONFIRMATION  </option>
+    				</optgroup>
+    				    				<optgroup label="RIV18">
+    				<option value="296905"  >*RIV18 Session BOOKING CONFIRMATION    - copy</option>
+    				</optgroup>
+    				    				<optgroup label="BOOKING">
+    				<option value="306991"  >JENNIFER --- SITTER SESSION</option>
+<option value="153969"  >*BKCON1 - PKG 1 BOOKING - NO BABY YET</option>
+<option value="198339"  >*BKCON3 - TWINS - NO BABIES YET</option>
+    				</optgroup>
+    				    				<optgroup label="FINAL CONFIRMATION">
+    				<option value="161528"  >1 FINCON1 - PKG 1 FINAL CLIENT CONFIRMATION - EVENT - 5/14</option>
+<option value="161532"  >3 FINCON3 - TWINS/TRIPLETS FINAL CLIENT CONFIRMATION - EVENT - 5/14</option>
+<option value="271147"  >MANHATTAN - FINCON1 - PKG 1 FINAL CLIENT CONFIRMATION - EVENT </option>
+<option value="271150"  >MANHATTAN FINCON3 - TWINS/TRIPLETS FINAL CLIENT CONFIRMATION - EVENT </option>
+<option value="306162"  >do not use for jh OB FINCON1 - 8/7/24</option>
+    				</optgroup>
+    				    				<optgroup label="GENERAL MODEL SESSION">
+    				<option value="172163"  >IN-HOME MODEL SESSION BOOKING CONFIRMATION</option>
+<option value="175222"  >PHOTOGRAPHER - IN-HOME MODEL SESSION NOTIFICATION</option>
+<option value="227205"  >NEXT STEPS - MODEL SESSION</option>
+    				</optgroup>
+    				    				<optgroup label="Content Projects">
+    				<option value="275518"  >***CP BOOKING CONFIRMATION  </option>
+    				</optgroup>
+    				    				<optgroup label="LA24">
+    				<option value="305146"  >*LA24 Session BOOKING CONFIRMATION</option>
+    				</optgroup>
+    				    				<optgroup label="UPGRADE EMAILS - PHOTOGRAPHER">
+    				<option value="233174"  >U1. NO UPGRADE - PHOTOGRAPHER</option>
+<option value="233175"  >U2. 12 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="233177"  >U3. 20 IMAGE UPGRADE - PHOTOGRAPHER </option>
+<option value="303713"  >U3a. 30-34 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="233838"  >U4. 40-55 Images: FULL GALLERY UPGRADE - PHOTOGRAPHER</option>
+<option value="238547"  >U5. 60-75: 50 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="233178"  >U6. 60-75: FULL GALLERY UPGRADE - PHOTOGRAPHER  </option>
+<option value="298212"  >U7. 80-95: 50 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="286005"  >U8. 80-95, 70 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="298214"  >U9. 80-95: FULL GALLERY UPGRADE - PHOTOGRAPHER</option>
+<option value="298213"  >U10. 100+: 50 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="298216"  >U11. 100+, 70 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="286006"  >U12. 100+, 90 IMAGE UPGRADE - PHOTOGRAPHER </option>
+<option value="298215"  >U13. 100+: FULL GALLERY UPGRADE - PHOTOGRAPHER</option>
+<option value="298270"  >U14. TWIN: NO UPGRADE - PHOTOGRAPHER</option>
+<option value="309451"  >U15. TWIN, 40 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="298272"  >U16. TWIN, 65 IMAGE UPGRADE - PHOTOGRAPHER</option>
+<option value="298271"  >U17. TWIN: FULL GALLERY UPGRADE - PHOTOGRAPHER</option>
+<option value="309453"  >U18. TWIN, 120 IMAGE UPGRADE - PHOTOGRAPHER </option>
+    				</optgroup>
+    				    				<optgroup label="STAFF COMMUNICATION">
+    				<option value="251825"  >1. PHOTOGRAPHER INFO QUESTIONNAIRE EMAIL</option>
+<option value="161524"  >1. PHOTOGRAPHERS -  NEW APPOINTMENT NOTIFICATION - EVENT</option>
+<option value="161117"  >2. PHOTOGRAPHERS - SCHEDULE CHANGE! - EVENT</option>
+<option value="179569"  >3. PHOTOGRAPHERS - SESSION REMINDER</option>
+<option value="186958"  >4. PHOTOGRAPHERS - SESSION MAY PUSH BACK</option>
+<option value="204023"  >5. SESSION CANCELLED</option>
+<option value="174978"  >Z1. PHOTOGRAPHER TASKS CHECKOFF</option>
+<option value="196757"  >Z2. PIXIFI LOGIN FOR NEW PHOTOGRAPHERS</option>
+    				</optgroup>
+    				    				<optgroup label="CLIENT CONTACT">
+    				<option value="251875"  >NAZ - CHANGE TIME EMAIL</option>
+<option value="246961"  >2nd CHECK IN FOR POSTPONED CV SESSIONS</option>
+<option value="245922"  >EMAIL FOR CLIENTS MAY 1-7 IN AREAS WITH SAH ORDERS EXPIRING AND STATUS UNSURE</option>
+<option value="244963"  >CV - NEED TO CANCEL & REFUND</option>
+<option value="244138"  >CORONAVIRUS RESCHEDULE EMAIL thru 5/7 or 5/15 DEPENDING ON MARKET</option>
+<option value="161120"  >1a. BABY ARRIVAL CHECK</option>
+<option value="196927"  >1b. TWINS - BABY ARRIVAL CHECK </option>
+<option value="211269"  >2a. NEXT STEPS - NEWBORN PACKAGE</option>
+<option value="211270"  >2b. NEXT STEPS - MULTIPLES PACKAGE</option>
+<option value="176901"  >3. NOTICE OF CANCELLATION </option>
+<option value="179425"  >5. PRINT RELEASE</option>
+<option value="176813"  >Z1. PRODUCT EMAIL #2</option>
+<option value="245631"  >EMAIL TO POSTPONED SESSION CLIENTS (March 17-April 30)</option>
+<option value="246279"  >CV - CANCELED SESSIONS REACH BACK OUT</option>
+<option value="273310"  >HEATHER - TIME CHANGE EMAIL FOR SUKANYA</option>
+    				</optgroup>
+    				    				<optgroup label="EDITING">
+    				<option value="174866"  >RETOUCHER NOTIFICATION</option>
+<option value="296829"  >RETOUCHER NOTIFICATION - 2ND ORDER</option>
+<option value="296874"  >RETOUCHER NOTIFICATION -3RD ORDER</option>
+<option value="233362"  >AUDIT - FINAL GALLERY </option>
+<option value="233361"  >AUDIT - PROOF GALLERY</option>
+<option value="176837"  >EDITORS - CLIENT STATUS CHECK</option>
+<option value="174995"  >EDITORS - EDITING WORKFLOW BEGINS</option>
+<option value="245939"  >EDITORS - BEGIN CULLING</option>
+<option value="174904"  >EDITORS - MODEL SESSION READY TO EDIT</option>
+<option value="161525"  >EDITORS - SESSION NOTIFICATION - EVENT</option>
+<option value="169998"  >EDITORS - SESSION UPLOADING</option>
+<option value="163588"  >EDITORS - UPGRADE - EVENT</option>
+<option value="180494"  >FINALIZE GALLERY ORDER - PKG 1</option>
+<option value="192215"  >FINALIZE GALLERY ORDER - PKG 2</option>
+    				</optgroup>
+    				    				<optgroup label="UPGRADE OPTIONS">
+    				<option value="210820"  >12 IMAGE UPGRADE</option>
+<option value="210821"  >25 IMAGE UPGRADE </option>
+<option value="210822"  >FULL GALLERY UPGRADE </option>
+<option value="237583"  >SUPERSIZE GALLERY UPGRADE</option>
+<option value="210830"  >NO UPGRADE</option>
+    				</optgroup>
+    				    				<optgroup label="OLD TEMPLATES">
+    				<option value="309237"  >do not use yet - jh NEXT STEPS - NEWBORN PACKAGE</option>
+<option value="158731"  >NEXT STEPS - PKG 1</option>
+<option value="158732"  >NEXT STEPS - PKG 2</option>
+<option value="158733"  >NEXT STEPS - TWINS PKG</option>
+<option value="167401"  >PRODUCT EMAIL</option>
+    				</optgroup>
+    				    				<optgroup label="Un-Categoried">
+    				<option value="253063"  >*** CLIENT - AUSTIN AREA TRAINING BOOKING CONFIRMATION </option>
+<option value="259136"  >*** CLIENT - AUSTIN AREA TRAINING BOOKING CONFIRMATION  - copy</option>
+<option value="271347"  >*** CLIENT - AUSTIN AREA TRAINING BOOKING CONFIRMATION  - copy - copy - copy</option>
+<option value="271348"  >*** CLIENT - AUSTIN AREA TRAINING BOOKING CONFIRMATION  - copy - copy - copy</option>
+<option value="264547"  >*** CLIENT - KC AREA TRAINING BOOKING CONFIRMATION  - copy</option>
+<option value="251876"  >*** CLIENT - MINNEAPOLIS AREA TRAINING BOOKING CONFIRMATION  - copy</option>
+<option value="276774"  >***AUS TRAINING BOOKING CONFIRMATION   - copy</option>
+<option value="282548"  >***Austin TRAINING BOOKING CONFIRMATION   - copy</option>
+<option value="282549"  >***CPAUS31 Video Session BOOKING CONFIRMATION   </option>
+<option value="273323"  >**OC24 Workshop BOOKING CONFIRMATION </option>
+<option value="288280"  >2nd CHECK IN (NOT SURE BABY IS HERE)</option>
+<option value="241762"  >AUSTIN - OTHER TRAINERS TRAINING EVENT AREA BOOKING CONFIRMATION  </option>
+<option value="276030"  >Client Portal info {event}</option>
+<option value="245522"  >CV BABY CHECK (NOT SURE IF BABY HAS ARRIVED) - copy</option>
+<option value="231752"  >DO NOT SEND ***COPY TRAINING DETAILS FOR CONFIRMATION***</option>
+<option value="241761"  >DO NOT SEND ***COPY TRAINING DETAILS FOR CONFIRMATION*** - copy</option>
+<option value="243130"  >DO NOT SEND ***COPY TRAINING DETAILS FOR CONFIRMATION*** - copy - copy</option>
+<option value="285349"  >EDITORS - DELETE RAW FILES</option>
+<option value="245938"  >EDITORS - EDITING WORKFLOW BEGINS - copy</option>
+<option value="276026"  >Engagement Session Reminder</option>
+<option value="307536"  >Expedited: RETOUCHER NOTIFICATION</option>
+<option value="271542"  >IN-HOME MODEL SESSION BOOKING CONFIRMATION - copy</option>
+<option value="229917"  >LA TRAINING - OTHER TRAINERS TRAINING EVENT AREA BOOKING CONFIRMATION </option>
+<option value="276028"  >Portrait Session Reminder</option>
+<option value="276029"  >Portrait Session tips</option>
+<option value="243131"  >SAN JOSE TRAINING - OTHER TRAINERS TRAINING EVENT AREA BOOKING CONFIRMATION  - copy</option>
+<option value="276027"  >Schedule proofing session {portrait}</option>
+<option value="229857"  >Temp Photographer Reminder</option>
+    				</optgroup>
+    				    </select>
+    </div>
+							<br style="clear: both;" />
+						</div>
+											<div class="form-group">
+						<div class="control-label col-xs-2 col-sm-2 col-md-2 col-lg-2">Subject: </div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10"><input type="text" id="subject_event" name="subject_event" size="" class="form-control" maxlength="" value=""  style="width: 595px; "   /></div>
+						<br style="clear: both;" />
+					</div>
+										<div class="form-group" style="overflow: hidden;">
+						<textarea id="message_event" name="message_event" cols="85" rows="15" class="form-control" resize=""   ></textarea>					</div>
+
+					<div class="form-group">
+						<div class="control-label col-xs-2 col-sm-2 col-md-2 col-lg-2">Attachments: </div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<span class="rightTitle">
+								<button type="button" class="btn blue btn-sm" onclick="getObjectUploadsDialog('attachments','attachmentListing');" title="Click to add an attachment, click again to add more" ><span class="icon-file-clip"></span> Add Attachment</button>
+								<button type="button" class="btn blue btn-sm" onclick="insertObjectEmailSignature('message_event','12295');" ><span class="icon-CV-2"></span> Insert Signature</button>
+								<!-- <button type="button" class="btn btn-default btn-sm" onclick="saveAsEmailTemplate('message_event','subject_event','12295');" ><span class="icon-file-download"></span> Save as Template</button> -->
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div id="attachmentListing">
+
+						</div>
+					</div>
+				</div>
+				<br style="clear: both;" />
+
+
+
+				<div style="float: left;" >
+
+					<div class="btn-group btn-group-sm">
+						<button type="button" id="sendEmailBtn" class="btn blue btn-sm" onclick="sendNewObjectEmail('event','1144239');">
+							<i class="icon-email-send" id="sendEmailIcon" ></i>
+							<span id="sendEmailText">Send E-mail</span>
+						</button>
+						<button type="button" class="btn blue btn-right dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							<i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li>
+								<a href="javascript:;" onclick="sendNewObjectEmailLater('event','1144239','1hour');"><i class="icon-clock"></i> Send in 1 hour </a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="showSendLaterFilter('event','1144239','today');"><i class="icon-clock"></i> Send Later Today </a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="showSendLaterFilter('event','1144239','custom');"><i class="icon-calendar-time"></i> Send Custom Date/Time </a>
+							</li>
+						</ul>
+					</div>
+
+					<button type="button" id="saveEmailDraftBtn" class="btn btn-default btn-sm" onclick="saveNewObjectEmailAsDraft('event','1144239');">
+						<i class="icon-inbox-full" id="saveEmailDraftIcon" ></i>
+						<span id="saveEmailDraftText">Save as Draft</span>
+					</button>
+
+				</div>
+
+
+				<div style="float: left; margin-left: 5px;" >
+					<button type="button" class="btn default btn-sm" onclick="closeObjectEmailWindow();"> Cancel</button>
+				</div>
+
+				<div id="objectEmailSendingLoad" class="hidden" style="float: left; margin-left: 20px; height: 25px; margin-top: -10px; display: none;">
+					<div class="dot-container ">
+						<div class="dot"></div>
+						<div class="dot"></div>
+						<div class="dot"></div>
+						<div class="dot"></div>
+						<div class="dot"></div>
+					</div>
+				</div>
+
+				<br style="clear: both;" />
+			</div>
+
+			<!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		</form>
+		
+```
+
+in the options for the selectize. in order to grab the correct email you can grab the staff listing and determine who the photographer is.
+
+```
+fetch("https://www.pixifi.com/admin/fn/events/refreshEventStaffListing/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/1144239/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&eventID=1144239&page=1",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+which returns
+
+```
+SUCCESS{|}	
+<div id="staff_1217683" class="normalThinRowStyle" style="position: relative;">
+    <div class="floatGrid" style="width: 80%;" class="smallText">
+        <a href="/admin/staff/15143/" title="Click to view Staff Member in new window" target="_blank">
+            <span style="float: left;margin-right: 10px;">
+                <strong>1 Rachel Wood</strong>
+            </span>
+        </a>
+        <div id="5823898_category" class="roundedTag" style="float: left; width: 10px; height: 10px; padding: 0px !important; color: #ffffff; background-color: #636363;" title="SUPPORT STAFF">&nbsp;</div>
+        <div id="5824105_category" class="roundedTag" style="float: left; width: 10px; height: 10px; padding: 0px !important; color: #d60000; background-color: #b3b3b3;" title="ASSIGN TO ALL BOOKINGS">&nbsp;</div>
+        <br/>
+        2 Lead Editor<br/>
+        <div onclick="changeEventStaffConfirmation('15143');" class="roundedTag" style="float: left; color: #ffffff; background-color: #26C281;">
+            <i class="icon-check-circle"></i>
+            Confirmed: Yes    		
+        </div>
+        <div class="roundedTag" title="This Staff is already assigned to another Event that conflicts with this one, and has either not confirmed yet, or is confirmed already for that Event. <br /><hr class='hrSlim' />They include: <br />&lt;a href=&#039;/admin/events/1087473/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 185229CABRERA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1113225/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 194654GERSHON051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1114817/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$L0  PC 195359EZIRIM051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1121443/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 197741BRADY051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1124822/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 199260LUU051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1128417/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 200718RUANOVA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129243/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 200960KLEEN051625DC-TWINS (DC NEWBORN - TWINS) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129302/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 200999OSEGHAE051625SAT (SAT NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129440/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 200952LAWSON051625POR (POR NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1131854/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 202015PARKER051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1133371/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 202608LUONG051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1133948/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 202905AMARE051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1135443/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203494FERRY051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1135776/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203670NGUYEN051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136809/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 204080GULA051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136853/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203952PERAZA051625LVN (LVN NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136917/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 204019PATEL051625ATL (ATL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1137724/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 204518FORMAN051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1138628/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ CCC 204877DOOLEY051625MAN (MAN NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1141769/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 206364HOLLADAY051625ORL (ORL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1141823/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ ^  PC 206312BURNS051625BOS (BOS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143331/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 206944VERGARA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143517/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207175HAMMAD051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143638/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207231SANCHEZ051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143794/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207241MONTOYA051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144171/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207521BUSCH051625JAX (JAX NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144317/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 207541KERIMIAN051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144391/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207655ODUSANYA051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144685/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ ^ 207789GEORGEY051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144954/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207892MAGANA051625OC (OC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145008/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207905STEWART051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145096/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207871LUFRANO051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145227/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208018MIRAJKAR051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145241/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 207932BORRELLO051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145358/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208073HERRERA051625OC (OC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145372/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208080REYES051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145538/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208148FLORES051625AUS (AUS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145637/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208008PATEL050925HOU (HOU NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145668/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208179KAUFMAN051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145687/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208234ABDULKADIR051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145689/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208219RITTMAN051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145736/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC  208249BOSE051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145765/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208268BEGONJA051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145830/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208312SINGH051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145870/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208335THE051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145871/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208295NERELLA051625AUS (AUS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146007/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208372JOHNSON051625RAL (RAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146009/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208380FURMAN051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146130/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208412SCOTT051625PHX (PHX NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146269/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208323SINGH051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146493/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208535OUM051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146626/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208597SAUNDERS051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146746/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208480ALUBILLE051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146824/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208592MOIZ051625HOU (HOU NEWBORN) &lt;/a&gt;&lt;br /&gt;" style="float: left; margin-left: 10px; color: #000000; background-color: #ffe9a8;">
+            <i class="icon-warning-triangle"></i>
+            Conflict
+	    		
+        </div>
+        <br style="clear: both;"/>
+        <div id="staff_contracts_15143" style="clear: both;"></div>
+    </div>
+    <div class="btn-group pull-right" style="position: absolute; right: 0px; top: 10px;">
+        <button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+            <i class="icon-more-circle actionsIcon"></i>
+        </button>
+        <ul class="dropdown-menu pull-right" role="menu">
+            <li>
+                <a href="javascript:void(0);" id="addContractBtn_15143" onclick="showAddStaffContractForm('1217683','15143');">
+                    <i class="icon-write-2"></i>
+                    Add Contract 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showAddQuestionnaireToStaff('15143');">
+                    <i class="icon-note"></i>
+                    Add Questionnaire 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showEditStaffRoleForm('15143');">
+                    <i class="icon-file-edit"></i>
+                    Edit Role 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="changeEventStaffConfirmation('15143');">
+                    <i class="icon-check-circle"></i>
+                    Change Confirmation Status
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:void(0);" onclick="deleteStaffFromEvent('1217683');" class=" font-red-flamingo">
+                    <i class="fa fa-times font-red-flamingo"></i>
+                    Remove Staff from Event
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearSmall"></div>
+    <br style="clear: both;"/>
+</div>
+<div id="staff_1217684" class="alternateThinRowStyleLight" style="position: relative;">
+    <div class="floatGrid" style="width: 80%;" class="smallText">
+        <a href="/admin/staff/21086/" title="Click to view Staff Member in new window" target="_blank">
+            <span style="float: left;margin-right: 10px;">
+                <strong>9 Ortus Jose</strong>
+            </span>
+        </a>
+        <div id="6107477_category" class="roundedTag" style="float: left; width: 10px; height: 10px; padding: 0px !important; color: #; background-color: #CCCCCC;" title="RETOUCHER">&nbsp;</div>
+        <br/>
+        3 RETOUCHER<br/>
+        <div onclick="changeEventStaffConfirmation('21086');" class="roundedTag" style="float: left; color: #ffffff; background-color: #26C281;">
+            <i class="icon-check-circle"></i>
+            Confirmed: Yes    		
+        </div>
+        <div class="roundedTag" title="This Staff is already assigned to another Event that conflicts with this one, and has either not confirmed yet, or is confirmed already for that Event. <br /><hr class='hrSlim' />They include: <br />&lt;a href=&#039;/admin/events/1087473/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 185229CABRERA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1113225/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 194654GERSHON051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1114817/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$L0  PC 195359EZIRIM051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1121443/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 197741BRADY051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1124822/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 199260LUU051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1128417/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 200718RUANOVA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129243/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 200960KLEEN051625DC-TWINS (DC NEWBORN - TWINS) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129302/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 200999OSEGHAE051625SAT (SAT NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1129440/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 200952LAWSON051625POR (POR NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1131854/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 202015PARKER051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1133371/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 202608LUONG051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1133948/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 202905AMARE051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1135443/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203494FERRY051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1135776/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203670NGUYEN051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136809/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 204080GULA051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136853/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 203952PERAZA051625LVN (LVN NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1136917/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 204019PATEL051625ATL (ATL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1137724/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 204518FORMAN051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1138628/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ CCC 204877DOOLEY051625MAN (MAN NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1141769/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 206364HOLLADAY051625ORL (ORL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1141823/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ ^  PC 206312BURNS051625BOS (BOS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143331/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 206944VERGARA051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143517/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207175HAMMAD051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143638/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207231SANCHEZ051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1143794/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207241MONTOYA051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144171/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207521BUSCH051625JAX (JAX NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144317/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 207541KERIMIAN051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144391/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207655ODUSANYA051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144685/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ ^ 207789GEORGEY051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1144954/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207892MAGANA051625OC (OC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145008/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207905STEWART051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145096/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 207871LUFRANO051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145227/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208018MIRAJKAR051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145241/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 207932BORRELLO051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145358/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208073HERRERA051625OC (OC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145372/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208080REYES051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145538/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208148FLORES051625AUS (AUS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145637/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208008PATEL050925HOU (HOU NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145668/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208179KAUFMAN051625SD (SD NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145687/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208234ABDULKADIR051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145689/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208219RITTMAN051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145736/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC  208249BOSE051625CHI (CHI NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145765/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208268BEGONJA051625NYNJ (NYNJ NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145830/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208312SINGH051625SF (SF NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145870/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208335THE051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1145871/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208295NERELLA051625AUS (AUS NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146007/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208372JOHNSON051625RAL (RAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146009/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208380FURMAN051625PHL (PHL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146130/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208412SCOTT051625PHX (PHX NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146269/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ PC 208323SINGH051625RIV (RIV NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146493/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208535OUM051625LA (LA NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146626/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208597SAUNDERS051625DC (DC NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146746/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208480ALUBILLE051625DAL (DAL NEWBORN) &lt;/a&gt;&lt;br /&gt;&lt;a href=&#039;/admin/events/1146824/&#039; target=&#039;_blank&#039; class=&#039;btn blue btn-xs&#039;&gt;&lt;i class=&#039;icon-calendar&#039;&gt;&lt;/i&gt; 05/16/2025 ()&lt;br /&gt;$ 208592MOIZ051625HOU (HOU NEWBORN) &lt;/a&gt;&lt;br /&gt;" style="float: left; margin-left: 10px; color: #000000; background-color: #ffe9a8;">
+            <i class="icon-warning-triangle"></i>
+            Conflict
+	    		
+        </div>
+        <br style="clear: both;"/>
+        <div id="staff_contracts_21086" style="clear: both;"></div>
+    </div>
+    <div class="btn-group pull-right" style="position: absolute; right: 0px; top: 10px;">
+        <button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+            <i class="icon-more-circle actionsIcon"></i>
+        </button>
+        <ul class="dropdown-menu pull-right" role="menu">
+            <li>
+                <a href="javascript:void(0);" id="addContractBtn_21086" onclick="showAddStaffContractForm('1217684','21086');">
+                    <i class="icon-write-2"></i>
+                    Add Contract 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showAddQuestionnaireToStaff('21086');">
+                    <i class="icon-note"></i>
+                    Add Questionnaire 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showEditStaffRoleForm('21086');">
+                    <i class="icon-file-edit"></i>
+                    Edit Role 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="changeEventStaffConfirmation('21086');">
+                    <i class="icon-check-circle"></i>
+                    Change Confirmation Status
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:void(0);" onclick="deleteStaffFromEvent('1217684');" class=" font-red-flamingo">
+                    <i class="fa fa-times font-red-flamingo"></i>
+                    Remove Staff from Event
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearSmall"></div>
+    <br style="clear: both;"/>
+</div>
+<div id="staff_1217685" class="normalThinRowStyle" style="position: relative;">
+    <div class="floatGrid" style="width: 80%;" class="smallText">
+        <a href="/admin/staff/26077/" title="Click to view Staff Member in new window" target="_blank">
+            <span style="float: left;margin-right: 10px;">
+                <strong>DC Diana Cram (FC)</strong>
+            </span>
+        </a>
+        <div id="6949224_category" class="roundedTag" style="float: left; width: 10px; height: 10px; padding: 0px !important; color: #; background-color: #CCCCCC;" title="DC">&nbsp;</div>
+        <br/>
+        <span style="float: left;margin-right: 10px;">
+            <strong>10:30AM - 12 wks & under - 1 day notice -  MIN2 - IDEAL4 - MAX5 </strong>
+        </span>
+        <br/>
+        1 Photographer<br/>
+        <div onclick="changeEventStaffConfirmation('26077');" class="roundedTag" style="float: left; color: #ffffff; background-color: #26C281;">
+            <i class="icon-check-circle"></i>
+            Confirmed: Yes    		
+        </div>
+        <br style="clear: both;"/>
+        <div id="staff_contracts_26077" style="clear: both;"></div>
+    </div>
+    <div class="btn-group pull-right" style="position: absolute; right: 0px; top: 10px;">
+        <button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+            <i class="icon-more-circle actionsIcon"></i>
+        </button>
+        <ul class="dropdown-menu pull-right" role="menu">
+            <li>
+                <a href="javascript:void(0);" id="addContractBtn_26077" onclick="showAddStaffContractForm('1217685','26077');">
+                    <i class="icon-write-2"></i>
+                    Add Contract 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showAddQuestionnaireToStaff('26077');">
+                    <i class="icon-note"></i>
+                    Add Questionnaire 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showEditStaffRoleForm('26077');">
+                    <i class="icon-file-edit"></i>
+                    Edit Role 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="changeEventStaffConfirmation('26077');">
+                    <i class="icon-check-circle"></i>
+                    Change Confirmation Status
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:void(0);" onclick="deleteStaffFromEvent('1217685');" class=" font-red-flamingo">
+                    <i class="fa fa-times font-red-flamingo"></i>
+                    Remove Staff from Event
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearSmall"></div>
+    <br style="clear: both;"/>
+</div>
+<div id="staff_1224114" class="alternateThinRowStyleLight" style="position: relative;">
+    <div class="floatGrid" style="width: 80%;" class="smallText">
+        <a href="/admin/staff/26818/" title="Click to view Staff Member in new window" target="_blank">
+            <span style="float: left;margin-right: 10px;">
+                <strong>1. Shawn Hughes</strong>
+            </span>
+        </a>
+        <br/>
+        <span style="float: left;margin-right: 10px;">
+            <strong>Testingstaffinfothingtest1</strong>
+        </span>
+        <br/>
+        1 Photographer<br/>
+        <div onclick="changeEventStaffConfirmation('26818');" class="roundedTag" style="float: left; color: #ffffff; background-color: #26C281;">
+            <i class="icon-check-circle"></i>
+            Confirmed: Yes    		
+        </div>
+        <br style="clear: both;"/>
+        <div id="staff_contracts_26818" style="clear: both;"></div>
+    </div>
+    <div class="btn-group pull-right" style="position: absolute; right: 0px; top: 10px;">
+        <button type="button" title="Actions" class="btn btn-xs btn-fit-height actionsBtn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true" aria-expanded="false">
+            <i class="icon-more-circle actionsIcon"></i>
+        </button>
+        <ul class="dropdown-menu pull-right" role="menu">
+            <li>
+                <a href="javascript:void(0);" id="addContractBtn_26818" onclick="showAddStaffContractForm('1224114','26818');">
+                    <i class="icon-write-2"></i>
+                    Add Contract 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showAddQuestionnaireToStaff('26818');">
+                    <i class="icon-note"></i>
+                    Add Questionnaire 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="showEditStaffRoleForm('26818');">
+                    <i class="icon-file-edit"></i>
+                    Edit Role 
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" onclick="changeEventStaffConfirmation('26818');">
+                    <i class="icon-check-circle"></i>
+                    Change Confirmation Status
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="javascript:void(0);" onclick="deleteStaffFromEvent('1224114');" class=" font-red-flamingo">
+                    <i class="fa fa-times font-red-flamingo"></i>
+                    Remove Staff from Event
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="clearSmall"></div>
+    <br style="clear: both;"/>
+</div>
+```
+
+for the event name inside of the email
+
+```
+fetch("https://www.pixifi.com/admin/fn/events/getEventOverviewWindow/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/events/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&eventID=1142268&customerType=client&customerID=1652117",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+```
+response
+```
+SUCCESS{|}												<div class="normalThinRowStyle">
+							<div class="leftTitle" >Status: </div>
+							
+							<div class="rightTitle" >
+									<div id="3073_status" class="roundedTag roundedTagBig"   style="color: #00adcf; background-color: #d9d9d9;" title="GALLERY COMPLETED" >GALLERY COMPLETED</div>
+		
+								
+																							
+							</div>
+							<br style="clear: both;" />
+							
+						</div>
+						
+
+												<div class="normalThinRowStyle">
+							<div class="leftTitle" >Event:</div>
+							<div class="rightTitle">
+							
+								<div class="btn-group">
+									<a href="/admin/events/1142268/" class="btn btn-default btn-sm" style="max-width: 280px;overflow: hidden;text-overflow: ellipsis;">
+										<span class="icon-calendar-date-2"></span> <strong>$ 206395SARAVIA043025DC 
+										<div class="roundedTag" style="display: inline; margin-right: 5px; width: 10px; height: 10px; padding: 4px !important; color: #000000; background-color: #ffdf87;" title="DC NEWBORN" >DC NEWBORN</div>
+									</a>
+									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i></button>
+									<ul class="dropdown-menu pull-right" role="menu">
+										<li>
+											<a href="/admin/clients/1652117/" ">View Client (Gabriela Saravia)</a>										</li>
+										<li>
+											<a href="javascript:void(0);" onclick="openWin( '12295','1142268' );">Print Event .pdf</a>
+										</li>
+										<li>
+											<a href="/admin/events/1142268/?autoStart=invoices" >View Event Invoices</a>
+										</li>
+										<li class="divider"></li>
+										<li>
+											<a href="/admin/invoices/add/1142268/" >Create Invoice</a>
+										</li>
+																				<li class="divider"></li>
+										<li>
+											<a href="/admin/events/delete/1142268/" class=" font-red-flamingo">Delete Event</a>
+										</li>
+																			</ul>
+								</div>
+															</div>
+							<br style="clear: both;" />
+						</div>
+						<div class="normalThinRowStyle">
+							<div class="leftTitle" >Client:</div>
+							<div class="rightTitle">
+																<a href="javascript:void(0);" onclick="getClientPreview('1652117');" class="btn btn-default btn-xs" style="margin-right: 5px;" data-toggle='popover' data-html='true' data-content='Click to view profile preview'><span class="icon-user-profile-1"></span></a>
+								<a href="/admin/clients/1652117/" target="_blank" class="btn btn-default btn-sm"><i class="icon-users"></i> Gabriela Saravia</a>							</div>
+							<br style="clear: both;" />
+						</div>
+												<div class="normalThinRowStyle" >
+							<div class='leftTitle' >Brand:</div>
+							<div class='rightTitle' >
+								(EDITING) EAST/CENTRAL SMP 							</div>
+							<div class="clearSmall" ></div><br style="clear: both;" />
+						</div>
+												<div class="normalThinRowStyle" >
+							<div class='leftTitle' >Time Zone:</div>
+							<div class='rightTitle' >
+								(GMT-05:00) Eastern Time (US & Canada)							</div>
+							<div class="clearSmall" ></div><br style="clear: both;" />
+						</div>
+						<div class="normalThinRowStyle">
+							<div class="leftTitle" >Event Date(s):</div>
+							<div class="rightTitle">
+								04/30/2025							</div>
+							<br style="clear: both;" />
+						</div>
+						<div class="normalThinRowStyle">
+							<div class="leftTitle" >Arrival Time:</div>
+							<div class="rightTitle">
+															</div>
+							<br style="clear: both;" />
+						</div>
+						<div class="normalThinRowStyle">
+							<div class="leftTitle" >Start/End Time:</div>
+							<div class="rightTitle">
+								<i class="icon-clock"></i> 10:30am -  xx 							</div>
+							<br style="clear: both;" />
+						</div>
+						<div class="normalThinRowStyle" >
+							<div class='leftTitle' >All-Day Event:</div>
+							<div class='rightTitle' >
+								No							</div>
+							<br style="clear: both;" />
+						</div>
+
+
+						
+						<div class="normalThinRowStyle" >
+
+							<div class="leftTitle">Workflow</div>
+							<div class="rightTitle" style="width: 60%;">
+								<div class="progress workflowProgressBar" style="margin-bottom: 0px; margin-top: 10px; height: 30px;">
+									<div data-toggle="popover" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-html="true" data-content="NONE (100%)" class="progress-bar progress-bar-default" style="background-color: #5bc0de; background: linear-gradient(45deg, #3cd3ad, #4CB8C4); width:  100%" data-original-title="" title=""></div>
+									<div class="percentageText" style="margin-top:5px;">NONE (100%)</div>
+								</div>
+							</div>
+							<div class="clearSmall"></div><br style="clear: both;">
+						</div>
+
+
+
+						<div class="normalThinRowStyle">
+							<div class="leftTitle" >Notes:</div>
+							<div class="rightTitle">
+															</div>
+							<br style="clear: both;" />
+						</div>
+													<div class="portlet light bordered">
+								<div class="leftTitle" >Staff:</div>
+								<div class="rightTitle">
+									<div class="roundedTag contractNotSigned" style="float: left; margin-right: 5px; color: #ffffff; background-color: #26C281;" title="Confirmed: Yes"><i class="icon-check-circle"></i></div><i class="icon-ID-card"></i> 1 Rachel Wood<br style='clear: both' /><div class="roundedTag contractNotSigned" style="float: left; margin-right: 5px; color: #ffffff; background-color: #26C281;" title="Confirmed: Yes"><i class="icon-check-circle"></i></div><i class="icon-ID-card"></i> 9 Ortus Jose<br style='clear: both' /><div class="roundedTag contractNotSigned" style="float: left; margin-right: 5px; color: #ffffff; background-color: #26C281;" title="Confirmed: Yes"><i class="icon-check-circle"></i></div><i class="icon-ID-card"></i> DC Diana Cram (FC)<br style='clear: both' /><div class="roundedTag contractNotSigned" style="float: left; margin-right: 5px; color: #ffffff; background-color: #26C281;" title="Confirmed: Yes"><i class="icon-check-circle"></i></div><i class="icon-ID-card"></i> 4 Jo  Diver<br style='clear: both' /><div class="roundedTag contractNotSigned" style="float: left; margin-right: 5px; color: #ffffff; background-color: #26C281;" title="Confirmed: Yes"><i class="icon-check-circle"></i></div><i class="icon-ID-card"></i> 4 Haley Becker<br style='clear: both' />								</div>
+								<br style="clear: both;" />
+							</div>
+```
+
+in this example response the event name is "206395SARAVIA043025DC"

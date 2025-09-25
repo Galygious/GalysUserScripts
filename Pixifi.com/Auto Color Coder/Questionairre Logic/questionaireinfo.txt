@@ -1,0 +1,29 @@
+fetch("https://www.pixifi.com/admin/fn/quest/addQuestionnaireTemplateToObject/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+    "sec-ch-ua": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-requested-with": "XMLHttpRequest"
+  },
+  "referrer": "https://www.pixifi.com/admin/leads/1622888/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "clientID=12295&templateID=79439&objType=lead&objID=1622888&brandID=19647&customerID=&sendEmail=0&responseID=&recipients=&responseSubject=&responseMsg=&responseType=questionnaire",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+
+
+<div class="cmf-skinned-select" style="width: 312px; height: 28px; background-color: rgb(59, 59, 59); color: rgb(51, 51, 51); font-size: 13px; font-family: &quot;Gotham Rounded Book&quot;, Helvetica, sans-serif; font-style: normal; position: relative;"><div class="cmf-skinned-text" style="height: 26px; width: 284px; opacity: 100; overflow: hidden; position: absolute; text-indent: 0px; z-index: 1; top: 0px; left: 0px;"> -- </div><select id="questionnairetemplate" name="questionnairetemplate" style="width: 298px; opacity: 0; position: relative; z-index: 100;" class="styled">
+<option value=""> -- </option>
+<option value="79438">(BABY HERE BOOKING FORM)  RESERVE SESSION</option>
+<option value="79439">(ADVANCED BOOKING FORM)  RESERVE SESSION</option>
+<option value="79458">(BABY HERE BOOKING FORM)  RESERVE MANHATTAN SESSION</option>
+<option value="79457">(ADVANCED BOOKING FORM)  RESERVE MANHATTAN SESSION</option>
+</select></div>

@@ -1,0 +1,59 @@
+First Activity in Hacking
+Research suggests that reconnaissance is usually the first activity in the hacking process, where attackers gather information about the target. This phase, also called footprinting, helps identify vulnerabilities before launching attacks.
+C
+
+Hacker Services
+It seems likely that hackers might offer services like DoS attacks, spam distribution, and password cracking, as these are common in cybercrime markets. The evidence leans toward all these being part of their offerings, especially for financial gain.
+D
+
+Most Vulnerable IT Domain to Social Engineering
+The evidence leans toward the User Domain being most vulnerable to social engineering, as these attacks exploit human psychology rather than technical systems, making users the primary target.
+B
+
+Attack Leading to Arbitrary Code Execution
+Buffer overflow attacks can result in arbitrary code execution with system-level privileges, allowing attackers to run malicious code on the target system, often leading to severe compromises.
+A
+
+Types of Social Engineering Techniques
+Both impersonation and creating urgency are common social engineering techniques, used to manipulate victims into revealing sensitive information or taking unsafe actions.
+C
+
+Attack Invulnerable to Technical Countermeasures
+Social engineering attacks are likely invulnerable to technical countermeasures, as they target human behavior rather than system vulnerabilities, making them harder to block with technology.
+D
+
+Vulnerability of TCP/IP Without Encryption
+Session hijacking is a common vulnerability for hosts using TCP/IP without encryption, as attackers can intercept and take over communication sessions, exploiting the lack of data protection.
+C
+
+Attack Involving Intervention in Communication
+Man-in-the-middle attacks involve hackers intervening in communication sessions between a client and server, often tricking the client into connecting with the hacker’s system instead of the intended server.
+B
+
+Common Threat to Network Security
+Contract workers may not represent a common threat to an organization’s network security, unlike opportunistic hackers, part-time employees, or disgruntled employees, who are more frequently cited as risks.
+B
+
+Mechanism of Malware Distribution
+Trojans are primarily a mechanism for distributing other malware, appearing as legitimate software to deliver malicious payloads, rather than being a specific type of malware themselves.
+A
+
+Not a Common Hacker Motivation
+Ethical behavior is not a common hacker motivation, as most hacking activities are driven by financial gain, thrill seeking, or peer pressure, rather than ethical considerations.
+C
+
+Group Responsible for Most Security Breaches
+Internal personnel are responsible for the highest percentage of organizational security breaches, often due to insider threats, whether intentional or accidental, given their access to systems.
+B
+
+Phase for Footprinting
+Footprinting occurs during the reconnaissance phase, where attackers gather initial information about the target, such as system details and vulnerabilities, to plan further attacks.
+C
+
+Phase for War Dialing, War Driving, or Ping Sweeps
+War dialing, war driving, and ping sweeps take place during the scanning phase, where attackers actively probe the target’s network to identify live systems and open ports.
+A
+
+Primary Difference Between Wired and Wireless Networks
+From a hacker’s perspective, the primary difference is that they don’t need to be physically close to a wireless network to launch an attack, unlike wired networks, which require physical access.
+C
